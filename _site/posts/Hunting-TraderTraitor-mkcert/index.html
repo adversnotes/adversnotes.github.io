@@ -543,6 +543,152 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -568,6 +714,17 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -962,7 +1119,7 @@
 
           <em>
             
-              <a href="https://github.com/juliospau">admin</a>
+              <a href="https://github.com/adversnotes">admin</a>
             
           </em>
         </span>
@@ -992,9 +1149,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="5418 words"
+  title="5611 words"
 >
-  <em>30 min</em> read</span>
+  <em>31 min</em> read</span>
 
         </div>
       </div>
@@ -1658,6 +1815,51 @@
   </tbody>
 </table></div>
 
+<h2 id="modelo-diamante"><span class="me-2">Modelo Diamante</span><a href="#modelo-diamante" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>El Modelo Diamante describe una intrusión con cuatro vértices: <strong>adversario</strong>, <strong>capacidad</strong>, <strong>infraestructura</strong> y <strong>víctima</strong>. Aquí sirve para ver por dónde he pivotado y qué vínculos están probados.</p>
+
+<p><a href="/assets/img/posts/tradertraitor/modelo-diamante-oscuro.webp" class="popup img-link dark shimmer"><img src="/assets/img/posts/tradertraitor/modelo-diamante-oscuro.webp" alt="Modelo Diamante de TraderTraitor con los cuatro pivotes de la investigación"  loading="lazy"></a>
+<a href="/assets/img/posts/tradertraitor/modelo-diamante-claro.webp" class="popup img-link light shimmer"><img src="/assets/img/posts/tradertraitor/modelo-diamante-claro.webp" alt="Modelo Diamante de TraderTraitor con los cuatro pivotes de la investigación"  loading="lazy"></a></p>
+
+<div class="table-wrapper"><table class="notranslate" translate="no">
+  <thead>
+    <tr>
+      <th>Vértice</th>
+      <th>En esta investigación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Adversario</strong></td>
+      <td>TraderTraitor, con tres operadores que firman con la misma CA: <code class="language-plaintext highlighter-rouge">ub</code>, <code class="language-plaintext highlighter-rouge">halid</code> y <code class="language-plaintext highlighter-rouge">yuli</code></td>
+    </tr>
+    <tr>
+      <td><strong>Capacidad</strong></td>
+      <td>Señuelo de empleo, proveedor falso de Terraform, <code class="language-plaintext highlighter-rouge">safari_updater</code>, FLATROOF y ROOFDECK</td>
+    </tr>
+    <tr>
+      <td><strong>Infraestructura</strong></td>
+      <td>La CA de mkcert, 13 servidores, los registros falsos, los C2 y los dominios de DNS dinámico</td>
+    </tr>
+    <tr>
+      <td><strong>Víctima</strong></td>
+      <td>Ingenieros con acceso a la nube: LayerZero (robo a KelpDAO) y una empresa TI india</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Los pivotes, en orden:</strong></p>
+
+<ol>
+  <li><strong>Víctima → capacidad.</strong> El análisis de ROOFDECK en una víctima revela que fija un certificado de mkcert.</li>
+  <li><strong>Capacidad → infraestructura.</strong> La CA de ese certificado lleva a 13 servidores (hallazgo 1).</li>
+  <li><strong>Infraestructura → adversario.</strong> El campo OU separa a tres operadores dentro del grupo (hallazgo 1).</li>
+  <li><strong>Infraestructura → víctima.</strong> <code class="language-plaintext highlighter-rouge">io.caiai[.]net</code> y <code class="language-plaintext highlighter-rouge">commsouthindia[.]com</code> llevan a la intrusión en LayerZero (hallazgo 3).</li>
+</ol>
+
+<p><strong>¿Y Binance?</strong> Coinciden el adversario y el señuelo de empleo, pero no se ha publicado su infraestructura. Sin ese vértice, no se puede unir el robo a la CA de mkcert ni a sus operadores.</p>
+
 <h2 id="indicadores"><span class="me-2">Indicadores</span><a href="#indicadores" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>Todos los indicadores están <strong>defangeados</strong>. Esta tabla prioriza lo <strong>nuevo</strong>; las notas indican la fuente de cada uno y si hay que tener cuidado al bloquearlo. Para los hashes, rutas y URLs de la campaña, consulta el aviso de Hive Pro, el informe de LayerZero y el análisis de ReversingLabs (y ten en cuenta que parte de los hashes del aviso son de 2022). <strong>Ninguno de estos indicadores está confirmado en el robo a Binance</strong>; para las direcciones de cartera de ese robo, consulta las publicadas por el FBI y las etiquetadas por TRM Labs.</p>
@@ -2220,6 +2422,13 @@ alert tls any any -&gt; any any (msg:"TLS emitido por una CA de mkcert en un ser
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/Hunting-Device-Code-Phishing-N0va-Infra/">N0va: Hunting de la infraestructura de un phishing kit de device code en workers.dev y Linode</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Hunting-ARTEX-consolas-pentesting-autonomo/">ARTEX: hunting del framework de pentesting basado en IA</a>
         </li>
       
@@ -2242,13 +2451,6 @@ alert tls any any -&gt; any any (msg:"TLS emitido por una CA de mkcert en un ser
         
         <li class="text-truncate lh-lg">
           <a href="/posts/Hunting-Mythic-C2/">Mythic C2: dos puertos, dos huellas por defecto</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Hunting-Brute-Ratel-C4/">Brute Ratel C4: cazando servidores que responden «200 OK» a una página no encontrada</a>
         </li>
       
     </ul>
@@ -3800,7 +4002,7 @@ alert tls any any -&gt; any any (msg:"TLS emitido por una CA de mkcert en un ser
     <time>2026</time>
 
     
-      <a href="https://github.com/juliospau">admin</a>.
+      <a href="https://github.com/adversnotes">admin</a>.
     
 
     

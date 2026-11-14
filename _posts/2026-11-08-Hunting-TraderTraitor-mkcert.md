@@ -334,6 +334,30 @@ La búsqueda en Shodan por el emisor de la CA devuelve hoy **solo los dos primer
 | 2026-11-05 | Publicación de Koczwara; `213.111.148[.]242` sigue con la CA | Koczwara / Nuevo |
 {: .notranslate translate="no" }
 
+## Modelo Diamante
+
+El Modelo Diamante describe una intrusión con cuatro vértices: **adversario**, **capacidad**, **infraestructura** y **víctima**. Aquí sirve para ver por dónde he pivotado y qué vínculos están probados.
+
+![Modelo Diamante de TraderTraitor con los cuatro pivotes de la investigación](modelo-diamante-oscuro.webp){: .dark }
+![Modelo Diamante de TraderTraitor con los cuatro pivotes de la investigación](modelo-diamante-claro.webp){: .light }
+
+| Vértice | En esta investigación |
+|---|---|
+| **Adversario** | TraderTraitor, con tres operadores que firman con la misma CA: `ub`, `halid` y `yuli` |
+| **Capacidad** | Señuelo de empleo, proveedor falso de Terraform, `safari_updater`, FLATROOF y ROOFDECK |
+| **Infraestructura** | La CA de mkcert, 13 servidores, los registros falsos, los C2 y los dominios de DNS dinámico |
+| **Víctima** | Ingenieros con acceso a la nube: LayerZero (robo a KelpDAO) y una empresa TI india |
+{: .notranslate translate="no" }
+
+**Los pivotes, en orden:**
+
+1. **Víctima → capacidad.** El análisis de ROOFDECK en una víctima revela que fija un certificado de mkcert.
+2. **Capacidad → infraestructura.** La CA de ese certificado lleva a 13 servidores (hallazgo 1).
+3. **Infraestructura → adversario.** El campo OU separa a tres operadores dentro del grupo (hallazgo 1).
+4. **Infraestructura → víctima.** `io.caiai[.]net` y `commsouthindia[.]com` llevan a la intrusión en LayerZero (hallazgo 3).
+
+**¿Y Binance?** Coinciden el adversario y el señuelo de empleo, pero no se ha publicado su infraestructura. Sin ese vértice, no se puede unir el robo a la CA de mkcert ni a sus operadores.
+
 ## Indicadores
 
 Todos los indicadores están **defangeados**. Esta tabla prioriza lo **nuevo**; las notas indican la fuente de cada uno y si hay que tener cuidado al bloquearlo. Para los hashes, rutas y URLs de la campaña, consulta el aviso de Hive Pro, el informe de LayerZero y el análisis de ReversingLabs (y ten en cuenta que parte de los hashes del aviso son de 2022). **Ninguno de estos indicadores está confirmado en el robo a Binance**; para las direcciones de cartera de ese robo, consulta las publicadas por el FBI y las etiquetadas por TRM Labs.
