@@ -214,7 +214,7 @@ id: 2c7a1a73-3097-4b05-a4f1-e79d3c712baa
 status: experimental
 description: Peticiones a los endpoints de verificación usados por páginas de device code phishing compatibles con N0va.
 references:
-  - https://juliospau.github.io/posts/n0va-device-code-phishing-infraestructura/
+  - https://adversnotes.github.io/posts/n0va-device-code-phishing-infraestructura/
 author: admin
 date: 2026-11-07
 tags:
