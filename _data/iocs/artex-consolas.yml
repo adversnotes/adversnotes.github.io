@@ -1,0 +1,200 @@
+# IOCs — Consolas de ARTEX expuestas (13-14 de noviembre de 2026)
+# Huellas: extraídas del código de ARTEX v0.3.15 (Hinln/ARTEX) y verificadas en Shodan, urlscan y MODAT.
+# IPs y dominios: consolas observadas en búsquedas propias. Una consola de ARTEX no es necesariamente
+# maliciosa (puede ser de un equipo de pentesting) y estas IPs rotan rápido: revisar antes de bloquear.
+# Valores de red defangeados.
+
+# --- Huellas de la herramienta (sirven para cazar, no para bloquear) ---
+- tipo: http.title
+  valor: "ARTEX — 自主渗透测试控制台"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "Título por defecto (web/src/config/app-config.ts). Shodan: 1.998; MODAT: 3.762"
+- tipo: http.html
+  valor: "LLM 驱动的自主渗透测试系统控制台"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "Meta description por defecto. Shodan: 2.084; MODAT: 3.958"
+- tipo: favicon mmh3
+  valor: "-1898746557"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "Hash de Shodan de icon.png (= public/logo.png), verificado sobre el código. Shodan: 2.070"
+- tipo: favicon mmh3
+  valor: "-576220750"
+  primera_vez: "2026-07"
+  confianza: media
+  notas: "Hash de Shodan de favicon.ico, calculado sobre el código. Consulta no ejecutada"
+- tipo: favicon sha256
+  valor: "8b567c0244f2dbee787165aea9c4ddabaaafb0fdb3b29899ac898c60a589856b"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "SHA256 de favicon.ico, el que usa urlscan (hash:). urlscan: 507"
+- tipo: html hash mmh3
+  valor: "-299104665"
+  primera_vez: "2026"
+  confianza: media
+  notas: "Hash del HTML en MODAT para la consola original (Content-Length 14815). Cambia con cada compilación"
+- tipo: url path
+  valor: "/function/tasks"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "Redirección tras el login (NEXT_REDIRECT;replace;/function/tasks). Se conserva en los forks"
+- tipo: url path
+  valor: "/api/auth/status"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "Endpoint sin autenticación que indica si la contraseña está fijada. urlscan: 545 con function/tasks/index.txt"
+- tipo: html
+  valor: "favicon.ico?favicon.1uboyqwm7-s27.ico"
+  primera_vez: "2026"
+  confianza: media
+  notas: "Marca de caché del favicon en la compilación oficial; la conservan forks como ScopeWeaver"
+- tipo: cookie
+  valor: "artex_token"
+  primera_vez: "2026-07"
+  confianza: alta
+  notas: "Cookie con el JWT de sesión (web/src/proxy.ts, server/auth.go)"
+- tipo: puerto
+  valor: "8787/tcp"
+  primera_vez: "2026-07"
+  confianza: media
+  notas: "Consola web por defecto. Puerto principal en Shodan (1.420 de 1.998)"
+- tipo: puerto + respuesta
+  valor: "8788/tcp · 400 · 此为代理服务器，不能直接发起请求"
+  primera_vez: "2026-07"
+  confianza: media
+  notas: "Proxy de grabación go-mitmproxy expuesto. Texto genérico de go-mitmproxy (48 bytes). MODAT: 218"
+
+# --- Variantes renombradas (forks) ---
+- tipo: http.title
+  valor: "ARTEX — Autonomous Penetration Testing Console"
+  primera_vez: "2026"
+  confianza: alta
+  notas: "Forks internacionalizados (también con dos puntos: 'ARTEX: Autonomous...')"
+- tipo: http.title
+  valor: "ScopeWeaver — Autonomous Penetration Testing Console"
+  primera_vez: "2026"
+  confianza: alta
+  notas: "Fork citado por Google. Visto en 102.220.160[.]63"
+- tipo: http.title
+  valor: "AntiFox — 自主渗透测试控制台"
+  primera_vez: "2026"
+  confianza: media
+  notas: "Descripción 'AI 驱动的自主渗透测试平台'. Visto en 47.79.89[.]225"
+- tipo: http.title
+  valor: "danny: 자율 침투 테스트 콘솔"
+  primera_vez: "2026"
+  confianza: media
+  notas: "Variante coreana. Visto en 5.231.240[.]5"
+
+# --- Imágenes y forks con puerta trasera (según The Hacker News / CSA) ---
+- tipo: imagen docker
+  valor: "tomicdd/artex"
+  primera_vez: "2026-10-08"
+  confianza: media
+  notas: "Imagen con puerta trasera verifyCaptcha() (ejecución como root desde el login). ~9.000 descargas"
+- tipo: imagen docker
+  valor: "congdonglinux/artex"
+  primera_vez: "2026"
+  confianza: media
+  notas: "Idéntica a tomicdd/artex según CSA"
+
+# --- Indicadores de CrowdStrike (bancos surcoreanos) ---
+- tipo: ip:puerto
+  valor: "38.244.50[.]120:18899"
+  primera_vez: "2026-08-18"
+  confianza: alta
+  notas: "CrowdStrike: instancia de ARTEX probablemente usada contra bancos surcoreanos. Censys vio directorios abiertos desde el 18-ago"
+- tipo: dominio
+  valor: "xcai[.]pro"
+  primera_vez: "2026-09"
+  confianza: media
+  notas: "CrowdStrike: probable proxy o reventa de API de LLM usada para acceder a DeepSeek"
+
+# --- Consolas observadas (13-14 de noviembre de 2026) ---
+- tipo: dominio
+  valor: "ai.cypherx[.]cn"
+  primera_vez: "2026-11-08"
+  confianza: media
+  notas: "Consola ARTEX en 202.79.168[.]14 (CTG Server Limited, AS152194). urlscan"
+- tipo: dominio
+  valor: "tks.meridianfoliots[.]com"
+  primera_vez: "2026-11-13"
+  confianza: media
+  notas: "Consola ARTEX en inglés en 84.200.24[.]178 (Ultahost). Dominio creado el 20-oct-2026"
+- tipo: dominio
+  valor: "artex.objchen[.]cn"
+  primera_vez: "2026"
+  confianza: media
+  notas: "CN de certificado en consolas ARTEX (faceta de Shodan)"
+- tipo: ip
+  valor: "27.50.63[.]82"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en el 8787; MODAT: Malicious, Security Tool, C2, Open Directory (CTG Server Limited)"
+- tipo: ip
+  valor: "156.234.85[.]211"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en el 8787 con 13 servicios más; MODAT: Malicious"
+- tipo: ip
+  valor: "152.89.170[.]85"
+  primera_vez: "2026-11-14"
+  confianza: baja
+  notas: "Consola renombrada 'Bob Research Labs'; urlscan registró /bins/kwari.arm5 (sin verificar)"
+- tipo: ip:puerto
+  valor: "82.38.44[.]198:8787"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en inglés (HostKey, EE. UU.). urlscan"
+- tipo: ip:puerto
+  valor: "185.125.50[.]112:8787"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en inglés (H2Nexus, Alemania). urlscan"
+- tipo: ip:puerto
+  valor: "47.88.5[.]5:8787"
+  primera_vez: "2026-11-13"
+  confianza: media
+  notas: "Consola ARTEX (Alibaba, EE. UU.). urlscan"
+- tipo: ip:puerto
+  valor: "104.223.55[.]96:8787"
+  primera_vez: "2026-11-13"
+  confianza: media
+  notas: "Consola ARTEX (ColoCrossing). urlscan"
+- tipo: ip
+  valor: "39.109.108[.]167"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en inglés en el 443 (VH Global, Hong Kong). urlscan"
+- tipo: ip
+  valor: "148.135.86[.]250"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en el 8787 y proxy go-mitmproxy expuesto en el 8788 (Multacom). MODAT"
+- tipo: ip
+  valor: "185.176.253[.]13"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en inglés y proxy expuesto en el 8788 (Contabo). MODAT"
+- tipo: ip
+  valor: "38.127.8[.]37"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX y proxy expuesto en el 8788 (Ultahost, Singapur). MODAT"
+- tipo: ip
+  valor: "117.50.196[.]50"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Consola ARTEX en el 8787 y proxy en el 8788; MODAT: C2, Malicious"
+- tipo: ip
+  valor: "102.220.160[.]63"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Fork ScopeWeaver en el 8787 (VPS Dedicated LLC, Eslovenia). MODAT"
+- tipo: ip
+  valor: "47.79.89[.]225"
+  primera_vez: "2026-11-14"
+  confianza: media
+  notas: "Fork AntiFox en el 80 (Alibaba, Tokio); proxy.lampon[.]cn. MODAT"
