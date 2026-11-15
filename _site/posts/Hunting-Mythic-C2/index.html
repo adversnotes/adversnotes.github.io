@@ -13,7 +13,7 @@
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html
-  lang="es"data-bs-theme="dark">
+  lang="es-ES"data-bs-theme="dark">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -28,7 +28,7 @@
   <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Mythic C2: dos puertos, dos huellas por defecto" />
-<meta property="og:locale" content="es" />
+<meta property="og:locale" content="es_ES" />
 <meta name="description" content="Mythic expone dos caras: el panel del operador en el puerto 7443 y el perfil HTTP al que se conectan los agentes en el 80. Sus valores por defecto dejan una huella en cada una, y la del perfil HTTP encuentra servidores aunque el panel esté oculto." />
 <meta name="twitter:description" property="og:description" content="Mythic expone dos caras: el panel del operador en el puerto 7443 y el perfil HTTP al que se conectan los agentes en el 80. Sus valores por defecto dejan una huella en cada una, y la del perfil HTTP encuentra servidores aunque el panel esté oculto." />
 <link rel="canonical" href="http://localhost:4000/posts/Hunting-Mythic-C2/" />
@@ -225,7 +225,7 @@
 
 
 
-  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3/dist/js/glightbox.min.js,npm/clipboard@2/dist/clipboard.min.js,npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.js,npm/dayjs@1/plugin/relativeTime.js,npm/dayjs@1/plugin/localizedFormat.js,npm/tocbot@4/dist/tocbot.min.js,npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3/dist/js/glightbox.min.js,npm/clipboard@2/dist/clipboard.min.js,npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/es.js,npm/dayjs@1/plugin/relativeTime.js,npm/dayjs@1/plugin/localizedFormat.js,npm/tocbot@4/dist/tocbot.min.js,npm/mermaid@11/dist/mermaid.min.js"></script>
 
 
 
@@ -279,7 +279,7 @@
       <li class="nav-item">
         <a href="/" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
-          <span>HOME</span>
+          <span>INICIO</span>
         </a>
       </li>
       <!-- the real tabs -->
@@ -289,7 +289,7 @@
             <i class="fa-fw fas fa-stream"></i>
             
 
-            <span>CATEGORIES</span>
+            <span>CATEGORÍAS</span>
           </a>
         </li>
         <!-- .nav-item -->
@@ -299,7 +299,7 @@
             <i class="fa-fw fas fa-tags"></i>
             
 
-            <span>TAGS</span>
+            <span>ETIQUETAS</span>
           </a>
         </li>
         <!-- .nav-item -->
@@ -309,7 +309,7 @@
             <i class="fa-fw fas fa-archive"></i>
             
 
-            <span>ARCHIVES</span>
+            <span>ARCHIVO</span>
           </a>
         </li>
         <!-- .nav-item -->
@@ -319,7 +319,7 @@
             <i class="fa-fw fas fa-info-circle"></i>
             
 
-            <span>ABOUT</span>
+            <span>ACERCA DE</span>
           </a>
         </li>
         <!-- .nav-item -->
@@ -371,19 +371,19 @@
     </a>
 
     <nav id="topnav" aria-label="Navegación principal">
-      <a href="/">home</a>
+      <a href="/">inicio</a>
       
         
-        <a href="/categories/">categories</a>
+        <a href="/categories/">categorías</a>
       
         
-        <a href="/tags/">tags</a>
+        <a href="/tags/">etiquetas</a>
       
         
-        <a href="/archives/">archives</a>
+        <a href="/archives/">archivo</a>
       
         
-        <a href="/about/">about</a>
+        <a href="/about/">acerca de</a>
       
     </nav>
 
@@ -393,7 +393,7 @@
     </button>
 
     <div id="topbar-title">
-      Post
+      Entrada
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
@@ -411,7 +411,7 @@
         placeholder="grep..."
       >
     </search>
-    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancelar</button>
   </div>
 </header>
 
@@ -1160,7 +1160,7 @@
     <div class="post-meta text-muted">
       <!-- published date -->
       <span>
-        Posted
+        Publicado
         <!--
   Date format snippet
   See: ${JS_ROOT}/modules/components/locale-datetime.js
@@ -1172,12 +1172,12 @@
 <time
   
   data-ts="1794128400"
-  data-df="ll"
+  data-df="DD/MM/YYYY"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Nov  8, 2026
+  08/11/2026
 </time>
 
       </span>
@@ -1201,7 +1201,7 @@
         <span>
           
 
-          By
+          Por
 
           <em>
             
@@ -1235,9 +1235,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2122 words"
+  title="2122 palabras"
 >
-  <em>11 min</em> read</span>
+  <em>11 min</em> de lectura</span>
 
         </div>
       </div>
@@ -1253,7 +1253,7 @@
     </div>
 
     <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
-      <span class="label ps-2 pe-1">Contents</span>
+      <span class="label ps-2 pe-1">Contenido</span>
       <i class="fa-solid fa-angle-right fa-fw"></i>
     </button>
 
@@ -1327,7 +1327,7 @@
 
 <div class="language-text notranslate highlighter-rouge" translate="no"><div class="code-header">
         <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+      <button aria-label="copy" data-title-succeed="¡Copiado!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>HTTP/1.1 200 OK Server: nginx/1.25.5 Content-Type: text/html Content-Length: 585 Connection: keep-alive Accept-Ranges: bytes
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1385,7 +1385,7 @@
 
 <div class="language-text notranslate highlighter-rouge" translate="no"><div class="code-header">
         <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+      <button aria-label="copy" data-title-succeed="¡Copiado!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>HTTP/1.1 404 Not Found Cache-Control: max-age=0, no-cache Connection: keep-alive Content-Type: application/javascript; charset=utf-8 Pragma: no-cache Server: NetDNA-cache/2.2 port:80
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1630,7 +1630,7 @@
 
 <div class="language-text notranslate highlighter-rouge" translate="no"><div class="code-header">
         <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+      <button aria-label="copy" data-title-succeed="¡Copiado!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>HTTP/1.1 200 OK Server: nginx/1.25.5 Content-Type: text/html Content-Length: 585 Connection: keep-alive Accept-Ranges: bytes
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1638,7 +1638,7 @@
 
 <div class="language-text notranslate highlighter-rouge" translate="no"><div class="code-header">
         <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+      <button aria-label="copy" data-title-succeed="¡Copiado!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>HTTP/1.1 404 Not Found Cache-Control: max-age=0, no-cache Connection: keep-alive Content-Type: application/javascript; charset=utf-8 Pragma: no-cache Server: NetDNA-cache/2.2 port:80
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1646,7 +1646,7 @@
 
 <div class="language-text notranslate highlighter-rouge" translate="no"><div class="code-header">
         <span data-label-text="Text"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+      <button aria-label="copy" data-title-succeed="¡Copiado!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="rouge-code"><pre>http.title:"Mythic" port:7443
@@ -1770,18 +1770,18 @@ ssl.cert.issuer.o:"Mythic"
         
           
 
-          This post is licensed under 
+          Esta entrada está licenciada bajo 
         <a href="https://creativecommons.org/licenses/by/4.0/">
           CC BY 4.0
         </a>
-         by the author.
+         por el autor.
         
       </div>
 
       <!-- Post sharing snippet -->
 
 <div class="share-wrapper d-flex align-items-center">
-  <span class="share-label text-muted">Share</span>
+  <span class="share-label text-muted">Compartir</span>
   <span class="share-icons">
     
     
@@ -1823,8 +1823,8 @@ ssl.cert.issuer.o:"Mythic"
       class="btn small"
       data-bs-toggle="tooltip"
       data-bs-placement="top"
-      title="Copy link"
-      data-title-succeed="Link copied successfully!"
+      title="Copiar enlace"
+      data-title-succeed="¡Enlace copiado!"
     >
       <i class="fa-fw fas fa-link pe-none fs-6"></i>
     </button>
@@ -1860,7 +1860,7 @@ ssl.cert.issuer.o:"Mythic"
 
 
   <section id="access-lastmod">
-    <h2 class="panel-heading">Recently Updated</h2>
+    <h2 class="panel-heading">Actualizado recientemente</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
       
         
@@ -3136,7 +3136,7 @@ ssl.cert.issuer.o:"Mythic"
 
 
   <section>
-    <h2 class="panel-heading">Trending Tags</h2>
+    <h2 class="panel-heading">Etiquetas populares</h2>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
@@ -3173,6 +3173,20 @@ ssl.cert.issuer.o:"Mythic"
   </section>
 
 
+<!-- Enlace al CyberObservatory -->
+
+  <section class="an-observatory">
+    <h2 class="panel-heading">Observatorio</h2>
+    <a class="an-observatory-link" href="https://cyberobservatory.vercel.app/" target="_blank" rel="noopener">
+      <img src="/assets/img/cyberobservatory.svg" width="32" height="32" alt="" loading="lazy">
+      <span>
+        <strong class="notranslate" translate="no">CyberObservatory</strong>
+        <small>Feeds de amenazas, ransomware e infostealers</small>
+      </span>
+    </a>
+  </section>
+
+
             </div>
 
             
@@ -3186,7 +3200,7 @@ ssl.cert.issuer.o:"Mythic"
 
   <div class="toc-border-cover z-3"></div>
   <section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4">
-    <h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2>
+    <h2 class="panel-heading ps-3 pb-2 mb-0">Contenido</h2>
     <nav id="toc"></nav>
   </section>
 
@@ -3311,7 +3325,7 @@ ssl.cert.issuer.o:"Mythic"
 
 
   <aside id="related-posts" aria-labelledby="related-label">
-    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <h3 class="mb-4" id="related-label">Lecturas adicionales</h3>
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
@@ -3328,10 +3342,10 @@ ssl.cert.issuer.o:"Mythic"
 <time
   
   data-ts="1794049200"
-  data-df="ll"
+  data-df="DD/MM/YYYY"
   
 >
-  Nov  7, 2026
+  07/11/2026
 </time>
 
               <h4 class="pt-0 my-2">Cobalt Strike: hunting de redirectores nginx a partir de una respuesta 302</h4>
@@ -3356,10 +3370,10 @@ ssl.cert.issuer.o:"Mythic"
 <time
   
   data-ts="1794056400"
-  data-df="ll"
+  data-df="DD/MM/YYYY"
   
 >
-  Nov  7, 2026
+  07/11/2026
 </time>
 
               <h4 class="pt-0 my-2">Brute Ratel C4: cazando servidores que responden «200 OK» a una página no encontrada</h4>
@@ -3384,10 +3398,10 @@ ssl.cert.issuer.o:"Mythic"
 <time
   
   data-ts="1794052800"
-  data-df="ll"
+  data-df="DD/MM/YYYY"
   
 >
-  Nov  7, 2026
+  07/11/2026
 </time>
 
               <h4 class="pt-0 my-2">RedGuard: hunting de redirectores de C2 por su configuración por defecto</h4>
@@ -3415,7 +3429,7 @@ ssl.cert.issuer.o:"Mythic"
     <a
       href="/posts/Hunting-Brute-Ratel-C4/"
       class="btn btn-outline-primary"
-      aria-label="Older"
+      aria-label="Anterior"
     >
       <p>Brute Ratel C4: cazando servidores que responden «200 OK» a una página no encontrada</p>
     </a>
@@ -3425,7 +3439,7 @@ ssl.cert.issuer.o:"Mythic"
     <a
       href="/posts/Hunting-TraderTraitor-mkcert/"
       class="btn btn-outline-primary"
-      aria-label="Newer"
+      aria-label="Nuevo"
     >
       <p>TraderTraitor: una CA de mkcert, tres operadores y el rastro hasta el robo de KelpDAO</p>
     </a>
@@ -3454,19 +3468,19 @@ ssl.cert.issuer.o:"Mythic"
       <span
         data-bs-toggle="tooltip"
         data-bs-placement="top"
-        title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
-      >Some rights reserved.</span>
+        title="Salvo que se indique explícitamente, las entradas de este blog están licenciadas bajo la Creative Commons Attribution 4.0 International (CC BY 4.0) License por el autor."
+      >Algunos derechos reservados.</span>
     
   </p>
 
-  <p>Using the <a
+  <p>Hecho con <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> usando el tema <a
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="v7.6.0"
         href="https://github.com/cotes2020/jekyll-theme-chirpy"
         target="_blank"
         rel="noopener"
-      >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
+      >Chirpy</a>
   </p>
 </footer>
 
@@ -4711,7 +4725,7 @@ ssl.cert.issuer.o:"Mythic"
 
 
   <section>
-    <h2 class="panel-heading">Trending Tags</h2>
+    <h2 class="panel-heading">Etiquetas populares</h2>
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
@@ -4748,6 +4762,20 @@ ssl.cert.issuer.o:"Mythic"
   </section>
 
 
+<!-- Enlace al CyberObservatory -->
+
+  <section class="an-observatory">
+    <h2 class="panel-heading">Observatorio</h2>
+    <a class="an-observatory-link" href="https://cyberobservatory.vercel.app/" target="_blank" rel="noopener">
+      <img src="/assets/img/cyberobservatory.svg" width="32" height="32" alt="" loading="lazy">
+      <span>
+        <strong class="notranslate" translate="no">CyberObservatory</strong>
+        <small>Feeds de amenazas, ransomware e infostealers</small>
+      </span>
+    </a>
+  </section>
+
+
     </div>
     <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
   </div>
@@ -4775,12 +4803,12 @@ ssl.cert.issuer.o:"Mythic"
   data-bs-autohide="false"
 >
   <div class="d-flex align-items-center">
-    <div class="toast-body ps-3">New content available</div>
+    <div class="toast-body ps-3">Hay contenido nuevo</div>
     <button
       type="button"
       class="btn btn-primary btn-sm rounded-2 py-0"
       aria-label="Update"
-    >Update</button>
+    >Actualizar</button>
     <button
       type="button"
       class="btn-close mx-3 ms-2"
@@ -4818,7 +4846,7 @@ ssl.cert.issuer.o:"Mythic"
       resultsContainer: document.getElementById('search-results'),
       json: '/assets/js/data/search.json',
       searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{content}</p>  </article>',
-      noResultsText: '<p class="mt-5">Oops! No results found.</p>',
+      noResultsText: '<p class="mt-5">¡Oops! No se encuentran resultados.</p>',
       templateMiddleware: function(prop, value, template) {
         if (prop === 'categories') {
           if (value === '') {

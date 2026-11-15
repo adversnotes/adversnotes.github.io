@@ -1,0 +1,1 @@
+{%- assign parts = include.url | split: "/" -%}{%- assign host = parts[2] -%}<a class="an-tool-link" href="{{ include.url }}" target="_blank" rel="noopener"><span class="an-tool-icon" style="background-image: url(https://icons.duckduckgo.com/ip3/{{ host }}.ico)" aria-hidden="true"></span>{{ include.name | default: host }}</a>
