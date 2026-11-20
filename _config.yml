@@ -237,5 +237,5 @@ jekyll-archives:
 
 # Enlace al CyberObservatory en el panel lateral
 cyberobservatory:
-  url: "https://cyberobservatory.vercel.app/"
-  description: "Feeds de amenazas, ransomware e infostealers"
+  url: "https://www.cyberobservatory.io/"
+  description: "Mi feed de amenazas, ransomware y vulnerabilidades"
