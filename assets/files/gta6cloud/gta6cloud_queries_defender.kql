@@ -1,0 +1,111 @@
+// =====================================================================================
+// GTA6Cloud / oxcollector - Hunting queries for Microsoft Defender XDR (Advanced Hunting)
+// Generated from the Sigma rules (pySigma kusto backend) and hand-adjusted where the
+// automatic mapping was wrong or impossible (registry key/value split, DNS, Defender, proxy).
+// Default lookback: adjust Timestamp filter as needed.
+// =====================================================================================
+
+// 1. Unlodctr.exe executed outside System32/SysWOW64 (side-loading host)
+DeviceProcessEvents
+| where Timestamp > ago(30d)
+| where (FolderPath endswith @"\unlodctr.exe" or ProcessVersionInfoOriginalFileName =~ "unlodctr.exe")
+| where not(FolderPath startswith @"C:\Windows\System32\" or FolderPath startswith @"C:\Windows\SysWOW64\" or FolderPath startswith @"C:\Windows\WinSxS\")
+| project Timestamp, DeviceName, AccountName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessFolderPath, SHA256;
+
+// 2. loadperf.dll loaded from a non-system directory
+DeviceImageLoadEvents
+| where Timestamp > ago(30d)
+| where FolderPath endswith @"\loadperf.dll"
+| where not(FolderPath startswith @"C:\Windows\System32\" or FolderPath startswith @"C:\Windows\SysWOW64\" or FolderPath startswith @"C:\Windows\WinSxS\")
+| project Timestamp, DeviceName, FolderPath, SHA256, InitiatingProcessFolderPath, InitiatingProcessCommandLine;
+
+// 3. Side-load pair written to masquerading cache folders
+DeviceFileEvents
+| where Timestamp > ago(30d)
+| where FileName in~ ("unlodctr.exe", "loadperf.dll")
+| where FolderPath has_any (@"\AppData\Local\Microsoft\Windows\Explorer\IconCacheToDelete\", @"\AppData\Local\Microsoft\Windows\Caches\", @"C:\ProgramData\", @"\AppData\Local\Temp\")
+| project Timestamp, DeviceName, ActionType, FolderPath, SHA256, InitiatingProcessFileName, InitiatingProcessFolderPath;
+
+// 4. unlodctr.exe spawning injection hosts (PhotoCache early-bird APC injector)
+DeviceProcessEvents
+| where Timestamp > ago(30d)
+| where InitiatingProcessFileName =~ "unlodctr.exe"
+| where FileName in~ ("dllhost.exe","waitfor.exe","where.exe","RuntimeBroker.exe","sihost.exe","aitstatic.exe","backgroundTaskHost.exe","WmiPrvSE.exe","TextInputHost.exe","rundll32.exe")
+| project Timestamp, DeviceName, FileName, ProcessCommandLine, InitiatingProcessFolderPath, InitiatingProcessCommandLine;
+
+// 5. Chromium App-Bound Encryption bypass artefacts (rundll32 ",AbeHost", injected DLL names, off-screen headless browser)
+DeviceProcessEvents
+| where Timestamp > ago(30d)
+| where (FileName =~ "rundll32.exe" and ProcessCommandLine contains ",AbeHost")
+     or ProcessCommandLine has_any ("locale_res_", "ox_abe_inject.dll")
+     or (FileName in~ ("chrome.exe","msedge.exe","brave.exe")
+         and ProcessCommandLine has_all ("--headless=new", "--window-position=-32000,-32000", "--silent-launch"))
+| project Timestamp, DeviceName, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessFolderPath;
+
+// 6. Persistence: Run / StartupApproved values pointing to the side-load pair
+//    (Defender splits key and value name: RegistryKey ends with \Run, value name in RegistryValueName)
+DeviceRegistryEvents
+| where Timestamp > ago(30d)
+| where ActionType == "RegistryValueSet"
+| where RegistryKey endswith @"\Software\Microsoft\Windows\CurrentVersion\Run"
+     or RegistryKey endswith @"\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run"
+| where RegistryValueData has_any (@"\Microsoft\Windows\Caches\", @"\IconCacheToDelete\", "unlodctr.exe")
+     or RegistryValueName has "unlodctr"
+| project Timestamp, DeviceName, RegistryKey, RegistryValueName, RegistryValueData, InitiatingProcessFileName, InitiatingProcessFolderPath;
+
+// 7. Persistence: logon scheduled task launching unlodctr.exe from a user/ProgramData folder
+DeviceEvents
+| where Timestamp > ago(30d)
+| where ActionType in ("ScheduledTaskCreated", "ScheduledTaskUpdated")
+| extend TaskContent = tostring(AdditionalFields)
+| where TaskContent has "unlodctr.exe" or TaskContent has @"\Microsoft\Windows\Caches\"
+| project Timestamp, DeviceName, ActionType, TaskContent, InitiatingProcessFileName, InitiatingProcessFolderPath;
+
+// 8. "New startup app" toast disabled (hides persistence)
+DeviceRegistryEvents
+| where Timestamp > ago(30d)
+| where ActionType == "RegistryValueSet"
+| where RegistryKey has @"\Notifications\Settings\Windows.SystemToast.StartupApp"
+| where RegistryValueName =~ "Enabled" and RegistryValueData in ("0", "0x00000000")
+| project Timestamp, DeviceName, RegistryKey, RegistryValueData, InitiatingProcessFileName, InitiatingProcessFolderPath;
+
+// 9. Defender exclusion paths added (WMI MSFT_MpPreference / victim told to add exclusions)
+DeviceRegistryEvents
+| where Timestamp > ago(30d)
+| where RegistryKey has @"\Microsoft\Windows Defender\Exclusions\Paths"
+| where ActionType in ("RegistryValueSet", "RegistryKeyCreated")
+| where RegistryValueName has_any (@"\AppData\Local\Microsoft\Windows\", "IconCacheToDelete", @"C:\ProgramData", @"\AppData\Local\Temp")
+| project Timestamp, DeviceName, RegistryKey, RegistryValueName, InitiatingProcessFileName, InitiatingProcessFolderPath;
+
+// 10. Network: C2 domains, fallback IP, backconnect port
+DeviceNetworkEvents
+| where Timestamp > ago(30d)
+| where RemoteUrl has_any ("velmontriq.net", "gta6cloud.nexus", "nimbuskeep.com")
+     or RemoteIP == "192.30.240.26"
+     or (RemotePort == 7777 and InitiatingProcessFileName in~ ("unlodctr.exe","waitfor.exe","where.exe","aitstatic.exe","dllhost.exe","RuntimeBroker.exe"))
+| project Timestamp, DeviceName, RemoteUrl, RemoteIP, RemotePort, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine;
+
+// 11. Dropper: GTA6Cloud launcher by version info / hash / children
+DeviceProcessEvents
+| where Timestamp > ago(30d)
+| where ProcessVersionInfoProductName =~ "GTA6Cloud" or ProcessVersionInfoCompanyName =~ "gta6cloud"
+     or SHA256 == "8694611d60ecf5f7d611431272ee4be9ec9b69162a0c827f510467c866d522e6"
+     or (InitiatingProcessFileName =~ "GTA6Cloud.exe" and FileName in~ ("unlodctr.exe","attrib.exe","taskkill.exe"))
+| project Timestamp, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine, SHA256, InitiatingProcessFileName;
+
+// 12. Known file hashes (all stages; stages 2 and 3 normally live only in memory)
+let gta6_hashes = dynamic([
+    "8694611d60ecf5f7d611431272ee4be9ec9b69162a0c827f510467c866d522e6", // GTA6Cloud.exe dropper
+    "2cd54f272d8dccd186c9b0aeedc9b3f05325bb3409cef965bd05af9a93ca7186", // loadperf.dll stage 1
+    "6f38c0479a36ebf4ff50c8e3ea3bae69bbef8046a0e96ca68fc01033d0b7c0df", // PhotoCache stage 2
+    "d8f847b86f0e6345a179c72fffe9be47201178412acbe871526547066dbb4d42", // oxcollector stage 3
+    // Earlier build published by Bitdefender Labs (2026-11-20), same bot ID
+    "3a0c4760dec4fed3e822db9a630107da266aaeffea8a0ccf506dfaa5847bd922", // GTA6Cloud.zip
+    "28f9725fc6a701fc5d3e06c5687c2a842e0cdf79b9b2780fb5a804fc006410e8", // GTA6Cloud.exe
+    "18dd64270e540a52db41bf77e357df709cbecab88e160bd66c23b63f9240ab38", // loadperf.dll
+    "33f1649976ff7a6c1a785a1d9eb091e078a5d653bff5f696fa48d80d5ef904f3"  // PhotoCache.exe
+]);
+union withsource=SourceTable DeviceFileEvents, DeviceProcessEvents, DeviceImageLoadEvents
+| where Timestamp > ago(30d)
+| where SHA256 in (gta6_hashes)
+| project Timestamp, DeviceName, SourceTable, FileName, FolderPath, SHA256;

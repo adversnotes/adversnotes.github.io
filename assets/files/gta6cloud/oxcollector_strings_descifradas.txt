@@ -1,0 +1,289 @@
+# oxcollector (GTA6Cloud, etapa 3): strings descifradas (XOR 0xA0) con DecodeOxcollectorStrings.py en Ghidra
+# Muestra: stage3 SHA256 d8f847b86f0e6345a179c72fffe9be47201178412acbe871526547066dbb4d42 (solo en memoria)
+# Formato: dirección virtual  string (las strings contiguas aparecen concatenadas)
+# Omitido a propósito: secreto SOCKS5/HMAC del C2 y un valor de 32 bytes sin identificar junto a OX_MASQ_NAME.
+# Recortado: el final de la salida eran bytes de código x86 (falsos positivos), no strings.
+# Las strings largas aparecen truncadas con "..." tal y como las muestra la consola de Ghidra.
+# Fuente: Adversary's Notes, https://adversnotes.github.io/
+#
+14022b82b  STAGE`
+14022bac8  Application
+14022cc54  locale_sync.exe
+14022cccb  ls_work
+14022d320  ClaudeDesktopChatGPTDesktop
+14022d366  .claude
+14022d3d6  C:\Program FilesC:\Program Files (x86)
+14022d458  "payment_sources""brand":""refresh_token":"Local State1
+14022d548  C:\Windows
+14022d632  SELECT COUNT(*) FROM (SELECT guid FROM loginsL WHERE COALESCE(is_deleted,0)=0 AND length(COALESCE(secFields,''))>0 UNION SELECT guid FROM loginsM WHERE COALESCE...
+14022d79a  (unknown)
+14022d7d8  AnyDesk
+14022d7f2  WinSCP
+14022d873  Local Extension Settings
+14022d904  name_on_cardnetworkexp_monthexp_yearbank_namenickname
+14022dcee  BLOCKED
+14022dd17  System.txt
+14022dd46  pingscanning browsers
+14022dd92  browsersDOING
+14022dda7  pool geckogecko send
+14022de10  retry browserswallets
+14022de80  telegram
+14022de90  SKIP telegram (panel plan)
+14022dec0  join late
+14022decd  grab leftoverSKIP grab (panel plan)grab lategrab bundle cutoff
+14022dfe0  collect logdoneLOCALINCOMPLETEOK
+14022e007  ZIPKEEP out (upload incomplete)DONE`
+14022e078  BrowsersCookiespersist skippersistFAILPARTIAL
+14022e13a  _decrypt.json
+14022e183  cookies_decrypted.json
+14022e1ef  started messengersstarted walletsstarted browsers
+14022e254  task: nothing uploaded (empty collect)RETRY: no System.txt in pending out 
+14022e2b2  RETRY upload: gate checkRETRY upload: blocked by panelRETRY upload: zip_tree failed
+14022e375  no logins.json/logins.db/key4.db/cookies.sqlite on disk
+14022e420  gecko: collect cutoff
+14022e788  retry weak browsers
+14022e7bd  skip empty
+14022e843  no Cookies/Login Data/Ya Passman on disk
+14022e926  started wallets: desktop
+14022e95d  started wallets: browser extensions
+14022e9ab  task wallets: upload
+14022e9e5  task browsers: nothing collected
+14022ea2f  task browsers: upload
+14022ea7f  started messengers: telegram tdata
+14022eabc  task messengers: nothing collectedtask messengers: uploadother_user_dpapi`
+14022eb80  loadperf.dllunlodctr.exe
+14022eba4  OX_HWBP_CHILD
+14022ec12  singleton 
+14022ec1f   mutex held, skip collectforce_collect: skip singleton/cooldowncooldowncooldown: pending out found 
+14022ec85   retrying upload
+14022ed4d  SKIPlog snapshot`
+14022edbd  meta.jsoncore failcore ok`
+14022ede1  ping failping okFAIL zip pinglocale_sync
+14022ee68  missingnot_needed
+14022ee81  ABEABE FAIL (no key)`
+14022eea0  -ABE OK`
+14022eebc  ABE n/a (DPAPI only)`
+14022eeda  noyesKEYDPAPI_FAIL
+14022ef48  OX_GRAB_BUNDLE_SECONDS
+14022f077  ABE needed
+14023045c  electrum_dataexodus.walletExodusseed.seco
+1402304b1  Cake Wallet
+1402304c7  desktopELECTRUMDIR
+140230718  Software\Zcash\Zcash-QtSoftware\Firo\Firo-QtSoftware\Dash\Dash-QtSoftware\Dogecoin\Dogecoin-QtSoftware\Litecoin\Litecoin-QtSoftware\Bitcoin\Bitcoin-QtstrDataDir
+140230860  %USERPROFILE%%APPDATA%%LOCALAPPDATA%DesktopOneDrive
+1402308aa  Downloads
+1402308c3  MicrosoftWindowsStart MenuPrograms
+140230b33  [OMITIDO: secreto SOCKS5/HMAC del C2]
+140230c0e  \microsoft\windows\caches\
+140230d26  Performance Counter Library
+140230d51  User DataData\User DataprofileProfile`
+14023125a  ChromiumArcThoriumCocCocAwesomeMinerCudoMinerSaladNiceHashNiceHash3KryptexVivaldiOperaOperaGXBraveBraveDevBraveBetaBraveNightlyEdgeEdgeCanaryEdgeBetaChromeChrom...
+140231353  FirefoxThunderbirdPaleMoonZenWaterfoxLibreWolfFloorpFirefoxDevprofiles.ini
+1402313f8  Profilesprefs.js
+140231500  secrets.txtapi_keys.json
+140231530  mcp_servers.json
+140231558  .codexApplicationsAICodexauth.jsonconfig.toml.env
+14023158e  session.json
+14023161b  .copilotCopilotconfig.jsonhosts.json
+14023178c  AI files=.grokGrokCLImcp_credentials.json
+140231e98  cookies.json
+140231ec0  ClaudeCodeCursorDesktop
+140231f25  session.txt
+140232518  AI cookies slots=
+140232580  DefaultGeminiCLI.geminisettings.jsonoauth_creds.jsongemini-credentials.jsonmcp-oauth-tokens.jsongemini-cli-workspace-token.jsonworkspace-token.json.gemini-cli-w...
+140232680  advapi32.dllCredEnumerateWCredFree
+140232752  CLAUDE_CONFIG_DIR.credentials.jsoncredentials.jsonsettings.local.json.claude.jsonAnthropic
+1402327be  OpenCode.localshareopencodeopencode.dbopencode-next.dbClaudeClaude-3pClaude Nest-3pClaude-DataPackages
+14023283f  LocalCacheRoaming.codeiumCodeium
+140232866  .awsssocachekiro-auth-token.jsonKiro
+14023292a  OpenAIChatGPT
+14023295b  web.cursormcp.json
+14023297e  cli-config.json
+14023299c  Cursor
+1402329dd  .cursor-insiders
+1402329fb  windsurfmcp_config.json
+140232a1d  Windsurf
+140232a35  Codemcp-config.json
+140232a63  .clinedatasettingsproviders.json
+140232a91  cline_mcp_settings.json
+140232ab8  .continueconfig.yaml
+140232ae7  .aider.conf.yml
+140232b04  .aider.env
+140232b21  .gooseBlockgooseconfigsecrets.yaml
+140232b73  .piagent
+140232b98  crushcrush.json
+140232bbb  .openhands
+140232be2  GitHub CLIhosts.yml
+140232c05  AI agent secrets=globalStoragerooveterinaryinc.roo-clinemcp_settings.json
+140232c5c  saoudrizwan.claude-devsecretslocal.agekeyring`
+140232d88  claude_desktop_config.jsoncowork-enabled-cli-ops.json
+140232de8  accountId
+140232f20  client
+140232f40  sentryscope_v3.jsonPartitionsopencode.jsoncopencode.json.config
+140232fe8  SELECT integration_id, value FROM credentialSELECT provider, value FROM credential
+1402331eb  claude.jsonlocal-agent-mode-sessionsclaude-code-sessions
+140233267  injectelevatorOX_ABE_HWBP_TIMEOUThwbpno_exeos_cryptapp_bound_encrypted_keyaster_app_bound_encrypted_keyOX_HWBP_UDOX_HWBP_OUTOX_HWBP_TIMEOUT
+140233650  Google Chromekey1
+14023366d  \microsoft\edge\bravesoftware\\google\chromeGoogle\Chrome\ApplicationBraveSoftware\Brave-Browser\ApplicationMicrosoft\Edge\Application
+1402336fe  OX_NO_KILL_BROWSERStrueonOX_SOFT_CLOSE_BROWSERSfalseoff
+14023373d  - aZd3
+1402337a8  chrome.exe
+140233800  encrypted_keyDPAPI
+140233864  key4.dbkey4.db-walkey4.db-shmkey3.dbcert9.dbcert8.dbpkcs11.txtlogins.jsonLOCALAPPDATAProgramFiles
+1402338e1  nss3.dllAblaze FloorpMozilla FirefoxNSS_InitNSS_ShutdownPK11_GetInternalKeySlotPK11_FreeSlotPK11_AuthenticatePK11SDR_Decrypt
+140233964  logins
+1402339bd  "mfa_codes"
+140233a70  eyAeyJ
+140233ae5  Steam%LOCALAPPDATA%\Steam\local.vdfConnectCacheSteam JWT tokensaccounts`
+140233b31  token.txt
+140233b46  Title:Username:SteamID:Token:
+140233b73  AccountNameloginusers.vdf
+140233b90  roaming"email":"
+140233c08  Discorddiscord_full.txtDiscord extras:DISCORD tokens=
+140233c5e  Email:MFA Backup Codes:
+140233c7c  Payment Methods:
+140233c95  OAuth Refresh Tokens:`
+140233d38  SELECT key, value, compression_type, conversion_type FROM datastate.vscdb`
+140233d8f  SELECT key, value FROM ItemTable WHERE key LIKE 'cursorAuth/%' OR key LIKE 'storage.%' OR key LIKE 'telemetry.%' OR key LIKE 'secret://%' OR key LIKE 'mcpOAuth....
+140233e79  cursorAuth/tokencursorAuth/refreshToken
+140233eb1  cursorAuth/stripeMembershipTypecursorAuth/stripeSubscriptionStatuscursor.slashUsage.v1storage.serviceMachineIdstorage.machineIdtelemetry.machineIdcursorAuth/ope...
+140233fc8  bearer.txtapi_keys.txt
+140234151  browser_cookie.txtCURSOR session=``
+140234278  PersonaNamediscord.exediscordcanary.exediscordptb.exediscorddevelopment.exevesktop.exeequibop.exelightcord.exediscordportable.exeDiscordPortableVesktopEquibopLi...
+14023445a  %PROGRAMFILES(X86)%\Steam%PROGRAMFILES%\Steam%LOCALAPPDATA%\SteamAPPDATA
+140234990  Mining
+1402349d0  _meta.json
+140234a3a  scanportableDatasessionData
+140234a9d  IndexedDB
+140234aae  WhatsAppWeb`
+140234adb  Local Storageleveldb`
+140234b17  stablediscordcanarydiscordcanaryptbdiscordptbdevelopmentdiscorddevelopmentvesktopequibopvencordVencord`
+140234b86  defaultpermanentstorage
+140234ba9  lightcord
+140234be8  lnkdQw4w9WgXcQ:Session Storage-wal-shm
+140234c28  SELECT origin, key, value FROM webappsstore2
+140234cf0  webappsstore.sqlite`
+140234d09  wa_keys.jsonlsdata.sqliteidb`
+140234d3a  wa_origin.txt.metadata-v2.metadatausage
+140234d80  OX_ABE_HWBP
+140234d97  ProductName
+140234dd1  CurrentBuildCurrentMajorVersionNumberCurrentMinorVersionNumber`
+140234e21  COMPUTERNAMEUSERNAMEProcessorNameString
+140234e76  DriverDesc
+140234ed2  InstallLanguage
+140234f7c  Windows Defender- OS Version:- Local Date:- Time Zone:- Computer:- User:- Language:- Anti Virus:- HWID:- RAM Size:`
+140234ff7  - CPU Name:- CPU Threads:- CPU Cores:- GPU:- IP Address:- Local IP:- Time Save Log:- Country: - UUID:- Build:- BuildVer:- System Installed:
+1402350a0  - Display resolution:
+140235167  InstallDateMachineGuid
+140235239  winhttp.dllWinHttpOpenWinHttpConnectWinHttpOpenRequestWinHttpSetTimeoutsWinHttpSendRequestWinHttpReceiveResponseWinHttpQueryDataAvailableWinHttpReadDataWinHttpC...
+140235368  OX_MACHINE_HWID
+140235398  STAGE SEND === Collect log ===saved=upload=
+1402353c6   Stages (screenshots 
+1402353de   send) 
+1402353f8    (no stages)
+140235408   Send (ok = on panel, fail = network/C2, skip empty = nothing to pack) 
+140235457    (no chunks)
+140235467   Detail (keys / skip / errors) 
+140235489    (empty)
+140235495   Archive snapshot 
+1402354aa  Screenshots/Screenshots
+1402354ca  Grab/GrabApplications/Wallets/WalletsPasswordManagers/PasswordManagers
+140235517  System.txt okSystem.txt FAILcollect ok CollectLog.txtLogStatus.txt
+1402355bd  Browsers/`
+1402355d2  _UserData_keysLocalState=NOLocalState=YES_keys=YES
+14023562c  logins_decrypted.json
+140235648  cookies_json=MISSINGcookies_json=parse_err
+140235682  logins_json=MISSINGlogins_json=parse_err
+1402356bc  no data
+1402358a4  wmiprvsedllhost
+1402358d0  [OMITIDO: valor de 32 bytes]OX_MASQ_NAME
+140235950  C:\Windows\System32\dllhost.exeC:\Windows\System32\wbem\WmiPrvSE.exeC:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exeC:\Windows\...
+140235a47  ntdll.dllNtQueryInformationProcessNeko0.6.1
+140235ab0  screenshot
+140235ad3  screen shot
+140235c4e  # Tesseract BIP39 extract (Rhadamanthys v0.7-style)# enginewinocr# root# images_ocr# hitsCANDIDATEVALIDSTATUS:FILE:ENGINE:WORDS:PHRASE:# no phrasesabandon  abil...
+140239908  mnemonicbip39seed-gridseed-phraserecovery-phrase
+14023994e  seedseeds
+140239a00  OX_SEED_OCR
+140239a28  tdataattachments.noindextelegram desktopwhatsappmediadocumentsdownloads\whatsapp\\whatsappClipboard.txtSeeds.txt
+140239b48  textdocxpdf
+140239b71  seedphraseseed_phraseseed_gridseedgridrecoverypassphrasephrasebackupwalletbip-39secretwords12word24word
+140239c16  nymvpnproton-recoveryrecovery_phraseseeds.txtgrab.txtsummary.txtbrute.txtall passwords.txtsystem.txtdomainsdetect.txtinstalledbrowsers.txtscreenshots.txtwallets...
+140239cdc  Windows.Media.Ocr.OcrEngine 
+14023a552  SystemRootSystem32WindowsPowerShellv1.0powershell.exe
+14023a6f0  SELECT item1, item2 FROM metadata WHERE id = 'password'SELECT a11, a102 FROM nssPrivateX
+14023a770  cookies.sqliteplaces.sqliteSELECT p.url, p.title, p.visit_count, MAX(v.visit_date) AS last_visit FROM moz_places p INNER JOIN moz_historyvisits v ON v.place_id ...
+14023a93a  _____________________________________________________________________________________________________________________________________formhistory.sqliteSELECT fi...
+14023ab08  SELECT p.url, p.title, dest.content, meta.content FROM moz_places p INNER JOIN moz_annos dest ON dest.place_id = p.id INNER JOIN moz_anno_attributes aa ON aa.id...
+14023acd0  SELECT p.url, p.title, MAX(v.visit_date) FROM moz_places p INNER JOIN moz_historyvisits v ON v.place_id = p.id WHERE v.visit_type = 7 AND p.url IS NOT NULL GROU...
+14023adc8  SELECT host, name, value, path, isSecure, isHttpOnly, expiry, originAttributes, isPartitionedAttributeSet FROM moz_cookiesSELECT host, name, value, path, isSecu...
+14023af00  logins.dblogins.db-wallogins.db-shmcookies.sqlite-walautofill-profiles.json
+14023af90  encryptedUsernameencryptedPasswordhostname
+14023aff0  SELECT guid, origin, COALESCE(httpRealm,''), COALESCE(secFields,''), COALESCE(is_deleted,0) FROM loginsLSELECT guid, origin, COALESCE(httpRealm,''), COALESCE(se...
+14023b100  Firefox Encrypted StorageFirefox Developer Edition Encrypted StorageFloorp Encrypted StorageLibreWolf Encrypted StorageWaterfox Encrypted StorageZen Encrypted S...
+14023b2f8  SELECT a11, a102, a3 FROM nssPrivate
+14023b342  password-check
+14023b3d5  history.json
+14023b3fd  downloads.jsonbookmarks.jsonautofill.jsoncards.jsongecko: skip extras, budgetlogins_status.json
+14023b538  %APPDATA%\Mozilla\Firefox%APPDATA%\Mozilla\Firefox Developer Edition%APPDATA%\Floorp%APPDATA%\librewolf%APPDATA%\Waterfox%APPDATA%\zen%APPDATA%\Moonchild Produc...
+14023b60f  %LOCALAPPDATA%\Google\Chrome\User Data%LOCALAPPDATA%\Microsoft\Edge\User Data%LOCALAPPDATA%\Yandex\YandexBrowser\User Data%LOCALAPPDATA%\BraveSoftware\Brave-Bro...
+14023b9c0  Brave DevBrave NightlyBrave BetaOpera GXMicrosoft EdgeGoogle Chrome BetaGoogle Chrome DevGoogle Chrome\google\chrome\
+14023ba38  \microsoft\edge\\yandex\yandexbrowser\\opera software\opera gxtimes.json
+14023baa0  gdi32.dllDeleteObjectuser32.dllGetDCReleaseDCCreateCompatibleDCCreateCompatibleBitmapSelectObjectBitBltDeleteDCGetSystemMetrics
+14023bb26  all.jpg
+14023bb4f  Screenshots.txt`
+14023bbac  GetMonitorInfoWEnumDisplayMonitorsSetProcessDpiAwarenessContextshcore.dllSetProcessDpiAwarenessSetProcessDPIAwaregdiplus.dllGdiplusStartupGdiplusShutdownGdipCre...
+14023bd8c  Grab.txtgrab copied=``
+14023bde1  {"allowed_extensions":[".txt",".log",".pdf",".doc",".docx",".xls",".xlsx",".json",".csv",".ini",".cfg",".conf",".rdp",".ovpn",".ppk",".kdbx",".wallet",".dat","....
+14023bf4b  ","%USERPROFILE%\\Documents","%USERPROFILE%\\
+14023bf8a  ","%USERPROFILE%\\
+14023bfb5  ","%USERPROFILE%\\Downloads","%USERPROFILE%\\
+14023bff2  "],"copy_locked_files":true,"evasion_profile":"balanced","max_depth":2,"max_file_size_bytes":2097152,"max_total_bytes":20971520,"min_file_size_bytes":1,"output"...
+14023c5c6  ","%USERPROFILE%\\
+14023c5ef  ","%USERPROFILE%\\OneDrive\\Desktop","%USERPROFILE%\\OneDrive\\Downloads","%USERPROFILE%\\OneDrive\\
+14023c663  ","%USERPROFILE%\\OneDrive\\
+14023c696  "],"extra_scan_seconds":8,"home_relative_paths":["Desktop/Telegram/tdata","Desktop/Telegram Desktop/tdata","Desktop/Tdata/tdata","Desktop/AyuGram/tdata","Downlo...
+14023c798  /Telegram Desktop/tdata","
+14023c7c2  /Telegram/tdata","
+14023c7e4  /AyuGram/tdata","
+14023c80c  /Telegram/tdata","
+14023c835  /Telegram Desktop/tdata","
+14023c866  /AyuGram/tdata","Documents/Telegram/tdata"],"max_drive_seconds":8,"max_roots":48,"portable_exe_names":["Telegram.exe","TelegramDesktop.exe","TelegramBeta.exe","...
+14023ccbd  %USERPROFILE%\Documents%USERPROFILE%\
+14023ccf4  %USERPROFILE%\
+14023cd1b  %USERPROFILE%\Downloads%USERPROFILE%\
+14023cd50  txtlogdocxlsxlsxjsoncsvinicfgconfrdpovpnppkkdbxdatkeykeyssecortfodtpngjpgjpegbmptiffwebp
+14023cf76  OX_GRAB_SECONDS
+14023cfc3  domains matchedcookie rowshistory URLs
+14023d011    (no matches)
+14023d036  Telegram.exeTelegramDesktop.exeTelegramBeta.exeAyuGram.exeKotatogram.exe64Gram.exeForkgram.exeMaterialGram.exeTeleglow.exeFAgram.exeYurigram.exeYukigram.exeiMe....
+14023d20d  clipboard.txt
+14023d23d  Windows Clipboard History (0 items) 
+14023d42f  allowed_rootsallowed_extensionsseed_image_detectionmin_file_size_bytesmax_file_size_bytesmax_total_bytesmax_depthskip_symlinksskip_hiddenmin_widthmin_heightmax_...
+14023d53a  cex_hitsCEXdex_hitsDEXwallet_setupWallet setupSOFT:Category:URL:Last visit:`
+14023d5a4  KeePassKeePass:Password managers / 2FA`
+14023d5ea  toxToxqTox
+14023d66b  kernel32.dllOpenClipboardGetClipboardDataCloseClipboardGlobalLockGlobalUnlock
+14023dca0  cookies.txtbinance.comcoinbase.comkraken.combybit.comokx.comkucoin.comgate.iomexc.combitget.comcrypto.comgemini.comhtx.comhuobi.combitfinex.comuniswap.orgpancak...
+14023e093  InstalledBrowsers.txtName:User Data:Profile:Profile folder:Extracted from:
+14024e34f  gDocumentsOneDrive\DesktopOneDrive\DownloadsOneDrive\DocumentsOneDrive\
+14024e3a6  OneDrive\
+14024e5ba  chromeavastbravecopy_onlyedgeWINDIRrundll32.exe--headless=new --no-startup-window --window-position=-32000,-32000 --window-size=1,1 --disable-gpu --disable-exte...
+14024e6f9  msedge.exebrave.exe
+14024e722  CreateJobObjectWAssignProcessToJobObjectSetInformationJobObject
+14024e76e  ox_abe_inject.dll
+14024e7ae  ../../ox_abe_inject.dll
+14024e80a  CreateProcessWTerminateProcessWaitForSingleObjectVirtualAllocExWriteProcessMemoryCreateRemoteThreadLoadLibraryW
+14024e8c2  OpenProcessQueryFullProcessImageNameW
+14024e904  firefox.exefloorp.exe
+14024e965  ABE rundll32 spawn fail
+14024e98a  ABE rundll32 no out.bin
+14024e9a7  opera.exeopera_gx.exevivaldi.exebrowser.exemsedgewebview2.exe
+14024ea32  librewolf.exewaterfox.exezen.exepalemoon.exe
+14024ea6f  Firefox Developer Edition\firefox.exe
+14024eab6  Mozilla Firefox\firefox.exeFloorp\firefox.exeFloorp\floorp.exeAblaze Floorp\floorp.exeLibreWolf\librewolf.exe
+14024eb2e  Waterfox\waterfox.exe
+14024eb4d  zen\zen.exeZen Browser\zen.exePale Moon\palemoon.exe
+14024eb8c  Mozilla Thunderbird\thunderbird.exe
+14024ebbc  thunderbird.exe
+14024eca8  CreateToolhelp32SnapshotProcess32FirstWProcess32NextWAvastBrowser.exeyandexbrowser.exe`

@@ -1,0 +1,22 @@
+# GTA6Cloud / oxcollector - Suricata network signatures (2026-11-21)
+# TLS traffic: only DNS and SNI are visible without inspection. HTTP rules apply with TLS interception
+# or if the samples fall back to http:// (dropper hub has http fallbacks).
+# SID range 9260001-9260099 (local). Adjust $HOME_NET as needed.
+
+alert dns $HOME_NET any -> any any (msg:"GTA6Cloud DNS lookup velmontriq.net (payload hub)"; dns.query; dotprefix; content:".velmontriq.net"; endswith; nocase; classtype:trojan-activity; sid:9260001; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"GTA6Cloud DNS lookup gta6cloud.nexus (lure/telemetry)"; dns.query; dotprefix; content:".gta6cloud.nexus"; endswith; nocase; classtype:trojan-activity; sid:9260002; rev:1;)
+alert dns $HOME_NET any -> any any (msg:"oxcollector DNS lookup nimbuskeep.com (stealer C2)"; dns.query; dotprefix; content:".nimbuskeep.com"; endswith; nocase; classtype:trojan-activity; sid:9260003; rev:1;)
+
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"GTA6Cloud TLS SNI velmontriq.net"; tls.sni; dotprefix; content:".velmontriq.net"; endswith; nocase; classtype:trojan-activity; sid:9260011; rev:1;)
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"GTA6Cloud TLS SNI gta6cloud.nexus"; tls.sni; dotprefix; content:".gta6cloud.nexus"; endswith; nocase; classtype:trojan-activity; sid:9260012; rev:1;)
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"oxcollector TLS SNI nimbuskeep.com"; tls.sni; dotprefix; content:".nimbuskeep.com"; endswith; nocase; classtype:trojan-activity; sid:9260013; rev:1;)
+
+alert ip $HOME_NET any -> 192.30.240.26 any (msg:"oxcollector traffic to hardcoded fallback C2 IP 192.30.240.26"; classtype:trojan-activity; sid:9260021; rev:1;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET 7777 (msg:"oxcollector possible SOCKS5 backconnect control channel (port 7777)"; flow:to_server,established; threshold:type limit, track by_src, count 1, seconds 3600; classtype:policy-violation; sid:9260022; rev:1;)
+
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"GTA6Cloud dropper hub download (unlodctr.exe / loadperf.dll)"; flow:to_server,established; http.uri; content:"/hub/gta6console/"; classtype:trojan-activity; sid:9260031; rev:1;)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"PhotoCache injector bootstrap (UA PhotoCache/1.6 + X-Ox-Bootstrap)"; flow:to_server,established; http.method; content:"POST"; http.user_agent; content:"PhotoCache/"; startswith; http.header_names; content:"X-Ox-Bootstrap"; nocase; classtype:trojan-activity; sid:9260032; rev:1;)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"oxcollector chunked exfil upload (X-Upload-Phase + X-Ox-Hwid)"; flow:to_server,established; http.method; content:"POST"; http.header_names; content:"X-Upload-Phase"; nocase; content:"X-Ox-Hwid"; nocase; classtype:trojan-activity; sid:9260033; rev:1;)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"oxcollector live screen frame upload (/api/watch-frame)"; flow:to_server,established; http.uri; content:"/api/watch-frame"; http.header_names; content:"X-Ox-Watch-Id"; nocase; classtype:trojan-activity; sid:9260034; rev:1;)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"oxcollector clipper event (/api/clipper-event)"; flow:to_server,established; http.uri; content:"/api/clipper-event"; classtype:trojan-activity; sid:9260035; rev:1;)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"GTA6Cloud launcher telemetry header X-GTA6Cloud-Client"; flow:to_server,established; http.header_names; content:"X-GTA6Cloud-Client"; nocase; classtype:trojan-activity; sid:9260036; rev:1;)

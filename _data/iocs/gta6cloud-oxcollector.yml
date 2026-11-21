@@ -1,0 +1,191 @@
+# IOCs — GTA6Cloud / oxcollector (análisis estático, 21 de noviembre de 2026)
+# Punto de partida: Threat Landscape (21-nov-2026) y Bitdefender Labs (20-nov-2026).
+# "Bitdefender" en las notas = build anterior publicado por Bitdefender Labs.
+# Valores de red defangeados. Las credenciales de acceso al C2 se omiten a propósito.
+
+# --- Dominios ---
+- tipo: dominio
+  valor: "nimbuskeep[.]com"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "C2 del stealer: /api/bootstrap, /api/upload, tareas, retransmisión de pantalla. SOCKS5 inverso en el puerto 7777"
+- tipo: dominio
+  valor: "velmontriq[.]net"
+  primera_vez: "2026-09-17"
+  confianza: alta
+  notas: "Hub de descargas (MoggyDayHub/gta6console). En ThreatFox también como falso launcher de Minecraft"
+- tipo: dominio
+  valor: "gta6cloud[.]nexus"
+  primera_vez: "2026-11-17"
+  confianza: alta
+  notas: "Web del señuelo y telemetría del launcher (/api/halls, /api/analytics/launcher)"
+
+# --- IPs ---
+- tipo: ip
+  valor: "192.30.240[.]26"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "IP de respaldo del C2 (subida y check), fijada en el código. También conexiones al puerto 7777"
+- tipo: ip
+  valor: "185.219.128[.]160"
+  primera_vez: "2026-11-21"
+  confianza: media
+  notas: "Señuelo gta6cloud[.]nexus (FlokiNET, AS200651, Islandia)"
+- tipo: ip
+  valor: "213.193.244[.]19"
+  primera_vez: "2026-11-19"
+  confianza: media
+  notas: "Señuelo gta6cloud[.]nexus (TrueFullstaq, Países Bajos). Mismo favicon en MODAT"
+- tipo: ip
+  valor: "213.193.244[.]42"
+  primera_vez: "2026-11"
+  confianza: media
+  notas: "Señuelo gta6cloud[.]nexus (TrueFullstaq, Países Bajos). Registro A en DNS"
+- tipo: ip
+  valor: "103.139.48[.]154"
+  primera_vez: "2026-11"
+  confianza: media
+  notas: "Señuelo gta6cloud[.]nexus y www (MHost, AS200823). Puertos 22, 80, 443, 2222"
+- tipo: ip
+  valor: "93.190.247[.]190"
+  primera_vez: "2026-11-10"
+  confianza: media
+  notas: "Relacionada con velmontriq[.]net en MODAT; certificado desde el 10-nov-2026"
+- tipo: ip
+  valor: "45.95.99[.]100"
+  primera_vez: "2026"
+  confianza: baja
+  notas: "Relacionada con velmontriq[.]net en MODAT; aloja también otros dominios ajenos a la campaña"
+
+# --- URLs ---
+- tipo: url
+  valor: "hxxps://velmontriq[.]net/hub/gta6console/loadperf.dll"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Descarga de la DLL de side-loading (también por http)"
+- tipo: url
+  valor: "hxxps://velmontriq[.]net/hub/gta6console/unlodctr.exe"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Descarga del binario legítimo usado para el side-loading (también por http)"
+- tipo: url
+  valor: "hxxps://velmontriq[.]net/hub/gta6console/run"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Comprobación del dropper con el hub (también /run2 por http)"
+- tipo: url
+  valor: "hxxps://gta6cloud[.]nexus/downloads/GTA6Cloud.zip"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "ZIP del dropper (Bitdefender)"
+- tipo: url
+  valor: "t.me/gta6cloudnexus"
+  primera_vez: "2026-11"
+  confianza: media
+  notas: "Canal de Telegram del señuelo, en ruso"
+
+# --- Hashes: build analizado aquí (21-nov-2026) ---
+- tipo: sha256
+  valor: "8694611d60ecf5f7d611431272ee4be9ec9b69162a0c827f510467c866d522e6"
+  primera_vez: "2026-11-21"
+  confianza: alta
+  notas: "GTA6Cloud.exe, dropper Tauri. Compilado el 21-nov-2026 a las 14:30 UTC"
+- tipo: sha256
+  valor: "2cd54f272d8dccd186c9b0aeedc9b3f05325bb3409cef965bd05af9a93ca7186"
+  primera_vez: "2026-11-21"
+  confianza: alta
+  notas: "loadperf.dll, etapa 1 (en disco junto a unlodctr.exe). Capa cifrada BLXO"
+- tipo: sha256
+  valor: "6f38c0479a36ebf4ff50c8e3ea3bae69bbef8046a0e96ca68fc01033d0b7c0df"
+  primera_vez: "2026-11-21"
+  confianza: alta
+  notas: "PhotoCache.exe, etapa 2 (solo en memoria). Inyector"
+- tipo: sha256
+  valor: "d8f847b86f0e6345a179c72fffe9be47201178412acbe871526547066dbb4d42"
+  primera_vez: "2026-11-19"
+  confianza: alta
+  notas: "oxcollector, etapa 3 (solo en memoria). PDB locale_sync.pdb"
+
+# --- Hashes: build publicado por Bitdefender (20-nov-2026) ---
+- tipo: sha256
+  valor: "3a0c4760dec4fed3e822db9a630107da266aaeffea8a0ccf506dfaa5847bd922"
+  primera_vez: "2026-11-20"
+  confianza: alta
+  notas: "GTA6Cloud.zip (Bitdefender)"
+- tipo: sha256
+  valor: "28f9725fc6a701fc5d3e06c5687c2a842e0cdf79b9b2780fb5a804fc006410e8"
+  primera_vez: "2026-11-20"
+  confianza: alta
+  notas: "GTA6Cloud.exe (Bitdefender)"
+- tipo: sha256
+  valor: "18dd64270e540a52db41bf77e357df709cbecab88e160bd66c23b63f9240ab38"
+  primera_vez: "2026-11-20"
+  confianza: alta
+  notas: "loadperf.dll (Bitdefender)"
+- tipo: sha256
+  valor: "33f1649976ff7a6c1a785a1d9eb091e078a5d653bff5f696fa48d80d5ef904f3"
+  primera_vez: "2026-11-20"
+  confianza: alta
+  notas: "PhotoCache.exe (Bitdefender)"
+
+# --- Firma, imphash y huellas de host ---
+- tipo: cert sha1
+  valor: "0F336AD01A7A5E9B0E4470D4212C9782FB114702"
+  primera_vez: "2026-11-21"
+  confianza: alta
+  notas: "Certificado autofirmado del dropper: CN=GTA6Cloud Hall Floki, O=GTA6Cloud Nexus"
+- tipo: imphash
+  valor: "1e4cb2c90ba388bd96d9f0925a15579b"
+  primera_vez: "2026-11-21"
+  confianza: media
+  notas: "loadperf.dll (etapa 1)"
+- tipo: ruta
+  valor: "%LOCALAPPDATA%\\Microsoft\\Windows\\Explorer\\IconCacheToDelete\\{8 hex}\\"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Carpeta oculta con unlodctr.exe + loadperf.dll (b8c41e70 en este build, 0a3f2c91 en el de Bitdefender)"
+- tipo: ruta
+  valor: "%LOCALAPPDATA%\\Microsoft\\Windows\\Caches\\"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Copia de persistencia de la pareja de side-loading"
+- tipo: ruta
+  valor: "%LOCALAPPDATA%\\Temp\\ls_trace.txt"
+  primera_vez: "2026-11-20"
+  confianza: media
+  notas: "Registro del stealer (Bitdefender)"
+- tipo: registro
+  valor: "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.StartupApp"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Enabled=0: oculta el aviso de nueva aplicación de inicio"
+- tipo: mutex
+  valor: "ox-pla-mtx-*"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Prefijo del mutex del stealer"
+- tipo: user-agent
+  valor: "PhotoCache/1.6"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Registro en el C2 con la cabecera X-Ox-Bootstrap"
+- tipo: cabecera http
+  valor: "X-Ox-Bootstrap / X-Ox-Hwid / X-Upload-Phase / X-Ox-Watch-Id"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Cabeceras del protocolo del C2 (requieren inspección TLS)"
+- tipo: cabecera http
+  valor: "X-GTA6Cloud-Client: launcher"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Telemetría del dropper hacia gta6cloud[.]nexus"
+- tipo: bot id
+  valor: "0xFBC83D63C5EAEEE9"
+  primera_vez: "2026-11-20"
+  confianza: alta
+  notas: "Identificador del bot, igual en los dos builds (bid 18142818597593607913)"
+- tipo: clave
+  valor: "707f5f12cc7a820f4ad8c3773a8387982ca66e16b0e0df9a6acfcbab04430eab"
+  primera_vez: "2026-11"
+  confianza: alta
+  notas: "Clave ChaCha20-Poly1305 que sella la configuración OXSE (para descifrar nuevas muestras)"

