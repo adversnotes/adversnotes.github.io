@@ -58,6 +58,8 @@ El punto inicial fue la publicación de Threat Landscape del 21 de noviembre, co
 4. **Ghidra** para el inyector y el stealer, con dos scripts propios para descifrar las strings ocultas (XOR `0xA0`) y exportar la configuración del clipper.
 5. **Comprobación on-chain** de una muestra de las direcciones del clipper y **contraste** con Bitdefender y ThreatFox.
 
+<div class="notranslate" translate="no" markdown="1">
+
 ```mermaid
 graph TD
   W["gta6cloud[.]nexus<br/>ZIP o comando ClickFix"] -->|"la víctima descarga y ejecuta el cliente"| D["GTA6Cloud.exe<br/>dropper hecho con Tauri"]
@@ -70,6 +72,7 @@ graph TD
   classDef mem stroke-dasharray: 5 5
   class L,P,S mem
 ```
+</div>
 
 Las cajas con borde discontinuo son las etapas que solo existen en memoria.
 
